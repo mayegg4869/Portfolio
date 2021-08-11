@@ -2,36 +2,53 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>しらゆき園 - 福祉法人白雪会 / トップページ</title>
 <link rel="icon" href="favicon.ico">
+<link rel="stylesheet" type="text/css" href="slick/slick.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" media="screen" />
 <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet">
+
+
+
+
 
 </head>
 <body>
-    <header>
-        <div class="logo"><img src="img/logo.png" width="280px"></div>
-        <div class="menu">
-            <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">しらゆき園について</a></li>
-                <li><a href="#">年間行事</a></li>
-                <li><a href="#">入園案内</a></li>
-                <li><a href="#">アクセス</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
+
+    <header class="main_h">
+        <div class="row">
+            <a href="#top"><img src="img/logo.png" width="280px"></a>
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
+            <nav>
+                <ul>
+                    <li><a href="#topics1">しらゆき園について</a></li>
+                    <li><a href="#topics2">年間行事</a></li>
+                    <li><a href="#topics3">アクセス</a></li>
+                    <li><a href="#topics4">お問い合わせ</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <div class="top">
-      <div class="slide">
-      	<img src="img/top_1.jpg">
-        <img src="img/top_2.jpg">
-      	<img src="img/top_3.jpg">
-      </div>
-      photo by <a href="https://www.photo-ac.com/">写真AC</a>
-    </div>
-    
     <div class="contents">
+        <div id="top">
+            <div class="slider">
+                <div class="slider_contents"><img src="img/top_1.jpg" width="100%"></div>
+                <div class="slider_contents"><img src="img/top_2.jpg" width="100%"></div>
+                <div class="slider_contents"><img src="img/top_3.jpg" width="100%"></div>
+            </div>
+          </div>
+        <div class="credit">photo by <a href="https://www.photo-ac.com/">写真AC</a></div>
+        <div class="tape"></div>
         <div class="info">
             <h1>お知らせ</h1>
             <dl><dt>2021年XX月XX日</dt><dd>保護者様へのお知らせを公開しました</dd></dl>
@@ -39,24 +56,128 @@
             <dl><dt>2021年XX月XX日</dt><dd>ホームページをリニューアルしました</dd></dl>
         </div>
         
-        <div class="topics">  
+        <div class="topics" id="topics1">
+            <h1>しらゆき園について</h1>
+            <h2>駅から徒歩数分、穏やかで楽しい場所が、みなさまを待っています。</h2>
+            <div class="topics_box">
+                <img src="img/intro_1.jpg">
+                <p>駅から細い道を進んだ閑静な街。<br>
+                    そこに"しらゆき園"は位置しています。<br>
+                    <br>
+                    付近には大きな公園があり、<br>
+                    緑に囲まれた、のびのびとした環境でお子さまを遊ばせることができます。</p>
+            </div>
             ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊ダミーテキスト＊
         </div> 
-        
-        
+        <div class="topics" id="topics2">
+            <h1>年間行事</h1>
+            <h2>春の行事</h2>
+                <div class="topics_box">
+                    <img src="img/event_1.jpg">
+                    <p>◆入園・卒園式<br>
+                        ダミーテキスト＊ダミーテキスト</p>
+                </div>
+            <h2>夏の行事</h2>
+                <div class="topics_box">
+                    <img src="img/event_2.jpg">
+                    <p>◆夏季遠足<br>
+                        ダミーテキスト＊ダミーテキスト<br>
+                        ◆夏休み<br>
+                        ダミーテキスト＊ダミーテキスト</p>
+                </div>
+            <h2>秋の行事</h2>
+                <div class="topics_box">
+                    <img src="img/event_3.jpg">
+                    <p>◆芋掘り体験<br>
+                        ダミーテキスト＊ダミーテキスト<br>
+                        ◆ハロウィンイベント<br>
+                    </p>
+                </div>
+            <h2>冬の行事</h2>
+                <div class="topics_box">
+                    <img src="img/event_4.jpg">
+                    <p>◆クリスマスイベント<br>
+                        ◆節分イベント<br>
+                    </p>
+                </div>
+        </div>
+        <div class="topics" id="topics3">
+            <h1>アクセス</h1>
+            <p>〒XXX-XXXX<br>
+                東京都XX区XXX町1-1-1<br>
+                tel.03-XXXX-XXXX</p>
+            <div class="gmap">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.895106889049!2d139.76493163639722!3d35.67962249451898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1627928782800!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class="topics_box">
+            <p>◆徒歩でお越しの場合<br>
+                XX駅の東口を出て、正面の通りを約100m進み、<br>
+                コンビニ前の通りを右折し、そのまま直進すると左手にしらゆき園の看板が見えます。</p>
+            </div>
+            <div class="topics_box">
+            <p>◆バスでお越しの場合<br>
+                バスを降りて右に進み、ラーメン屋を左折して<br>
+                約700mほど進むと右手にしらゆき園の看板が見えます。<br>
+                </p>
+            </div>
+        </div> 
+        <div class="topics" id="topics4">
+            <h1>お問い合わせ</h1>
+            <div class="topics_box">
+                <p>入園のご希望や資料の請求など、<br>
+                    お気軽にご連絡ください。<br>
+                    通常２～３営業日中に返信いたします。<br>
+                    </p>
+            </div>
+            <form action="" method="post">
+                <div class="item">
+                    <label class="label">お名前</label>
+                    <input class="inputs" type="text" name="name">
+                  </div>
+                  <div class="item">
+                    <label class="label">メールアドレス</label>
+                    <input class="inputs" type="email" name="email">
+                  </div>
+                  <div class="item">
+                    <p class="label">お問い合わせ内容</p>
+                    <div class="inputs">
+                    <input id="cut" type="radio" name="menu" value="cut"><label for="cut">資料請求</label>
+                    <input id="cut-color" type="radio" name="menu" value="cut-color"><label for="cut-color">入園希望</label>
+                    <input id="headspa" type="radio" name="menu" value="headspa"><label for="headspa">その他</label>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <label class="label">コメント</label>
+                    <textarea class="inputs"></textarea>
+                  </div>
+                <p><div class="btn-area"><input type="submit" value="予約する"><input type="reset" value="リセット"></div></p>
+            </form>
+        </div> 
+        <footer>
+            <div class="footer_contets">
+                <h1>入園のご相談・お問い合わせはこちら</h1>
+                <p>Tel.03-XXXX-XXXX</p>
+                <p>〒XXX-XXXX　東京都XX区XXX町1-1-1</p>
+            </div>
+            <p>Copyright © Shirayuki All Rights Reserved.</p>
+        </footer>
     </div>
-    
-    <footer>
-        <div class="footer_contets">
-        <div class="footer_box">
-            <h1>入園のご相談・お問い合わせはこちら</h1>
-            <p>Tel.03-XXXX-XXXX</p>
-            <p>〒XXX-XXXX　東京都XX区XXX町1-1-1</p>
-        </div>
-        <p style="bottom: 0;">Copyright © Shirayuki All Rights Reserved.</p>
-        </div>
-    </footer>
-    
-    
+    <div id="page_top"><a href="#"></a></div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script type="text/javascript" src="menu.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+        $('.slider').slick({
+                autoplay:true,
+                autoplaySpeed:5000,
+                fade: true,
+                dots:true,
+                arrows:false,
+    });
+    });
+    </script>
 </body>
 </html>
