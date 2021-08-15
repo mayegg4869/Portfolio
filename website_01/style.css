@@ -130,6 +130,10 @@ h1{
   font-family: "M PLUS Rounded 1c";
   font-size: 1.2rem;
 }
+span{
+  display: block;
+  line-height: 1.5rem;
+}
 
 .contents{ 
   margin: 0 auto;
@@ -236,11 +240,9 @@ h1{
   border-bottom: 1px solid #888;
   margin-bottom: 1rem;
 }
-
 .topics img {
   border-radius: 10px;
 }
-
 
 .topics_box {
   margin: 1rem auto;
@@ -259,15 +261,15 @@ h1{
   line-height: 1.5rem;
   color: rgb(29, 29, 29);
 }
+
 @media screen and (max-width: 930px) {
   .topics_box{
     width: 95%;
     display:block;
   }
-}
-
-.clear{
-  clear: both;
+  .topics_box img {
+    width: 100%;
+  }
 }
 
 .gmap {
@@ -297,18 +299,18 @@ h1{
   }
   .item{
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
   }
   .label{
     float: left;
-    margin-right: 20px;
-    width:135px;
+    margin-right: 1rem;
+    width:30%;
     border-left: solid 3px #cf1919;
     padding-left: 10px;
   }
   .inputs{
     float: left;
-    width:300px;
+    width:50%;
   }
   input[type="text"],input[type="email"]{
     border: solid 1px #aaa;
@@ -344,6 +346,9 @@ h1{
     padding: 10px 20px;
     margin: 0 5px;
   }
+
+
+
 
 footer {
   color: #ffffff;
@@ -383,18 +388,8 @@ footer {
   width: 80px;
   height: 80px;
   text-decoration: none;
-  }
-  
-  #page_top a::after{
-  content: '🡅';
-  font-weight: bold;
-  color: #fff;
-  position: absolute;
-  top: 2.2rem;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
+  color:  #fff;
+  top: 1.5rem;
   text-align: center;
   }
 
