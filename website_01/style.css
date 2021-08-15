@@ -454,7 +454,7 @@ nav ul a {
     width: 100%;
   }
   nav ul {
-    padding-top: 10px;
+    padding-top: 20px;
     margin-bottom: 22px;
     float: left;
     text-align: center;
@@ -481,6 +481,7 @@ nav ul a {
 @media only screen and (max-width: 930px) {
   .mobile-toggle {
     display: block;
+    right: 1rem;
   }
 }
 .mobile-toggle span {
@@ -497,7 +498,11 @@ nav ul a {
   margin: 0 auto;
   position: relative;
 }
-
+@media only screen and (max-width: 930px) {
+  .row {
+    width: 100%;
+  }
+}
 
 @-webkit-keyframes scroll {
   0% {

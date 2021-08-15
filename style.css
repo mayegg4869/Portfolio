@@ -1,0 +1,185 @@
+
+/*----------------------------------*/
+/* CSSリセット
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+ /*----------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+body {
+    line-height:1;
+}
+ 
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ 
+nav ul {
+    list-style:none;
+}
+ 
+blockquote, q {
+    quotes:none;
+}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+ 
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+ 
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+ 
+del {
+    text-decoration: line-through;
+}
+ 
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+ 
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+ 
+input, select {
+    vertical-align:middle;
+}
+
+
+/* 
+------------------------------------------------------------
+  以下CSS設定
+------------------------------------------------------------
+*/
+body {
+    background-color: #000000;
+    background-image: url(img/43.gif);
+    background-repeat: repeat-y;
+    text-align: center;
+    color: #fff;
+    }
+
+header{
+    margin: 2rem auto;
+}
+p{
+    margin: 1rem auto;
+}
+span.del {
+    text-decoration-line: line-through;
+    text-decoration-style: solid;
+  }
+
+a {
+    color:#FFF;
+}
+a:hover {
+    color:#FF0099;
+    }
+
+
+.contents{
+    margin: 0 auto;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    color: #1b1b1b;
+}
+.contents_inbox{
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+}
+.contents a {
+color: #1b1b1b;
+}
+.contents a:hover{
+        color:#FF0099;
+}
+
+  details {
+    margin: 1.5rem auto;
+    width: 80%;
+    height: 1.5rem;
+    transition: .5s;
+  }
+  details[open] {
+    width: 80%;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  @media only screen and (max-width: 930px) {
+    .contents{
+        width: 100%;
+    }
+    .contents_inbox{
+        width: 100%;
+    }
+    details {
+        width: 100%;
+      }
+      details[open] {
+        width: 100%;
+      }
+}
