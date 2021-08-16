@@ -266,6 +266,7 @@ span{
   .topics_box{
     width: 95%;
     display:block;
+    text-align: center;
   }
   .topics_box img {
     width: 100%;
