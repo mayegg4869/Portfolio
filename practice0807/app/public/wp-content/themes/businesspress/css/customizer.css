@@ -1,0 +1,24 @@
+.customize-text .customize-section {
+	background-color: #fff;
+	margin-top: 8px;
+	padding: 4px 15px;
+}
+.customize-text .first-customize-section {
+	margin-top: 30px;
+}
+.customize-text a.customize-button {
+	background-color: #e7430e;
+	border-radius: 4px;
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 8px;
+	padding: 6px 14px 8px;
+	text-decoration: none;
+	transition: .15s ease-in-out; 
+}
+.customize-text a.customize-button:hover,
+.customize-text a.customize-button:active {
+	background-color: #ea6236;
+}

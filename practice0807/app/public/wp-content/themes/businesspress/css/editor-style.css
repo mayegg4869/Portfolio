@@ -1,0 +1,270 @@
+/*
+Theme Name: BusinessPress
+Description: Used to style the editor.
+*/
+
+/* Entry-Title */
+.editor-post-title__block .editor-post-title__input {
+	color: #111;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 40px;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1.5;
+}
+.editor-post-title__block .editor-post-title__input:lang(ja) {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 32px;
+}
+
+/* Base */
+body {
+	color: #444;
+	font-family: "Helvetica", "Arial", sans-serif;
+	font-size: 20px;
+	line-height: 1.6;
+}
+body:lang(ja) {
+	font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 1.8;
+}
+
+/* Heading */
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	color: #111;
+	font-weight: 700;
+	line-height: 1.5;
+}
+h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+h2 {
+	font-size: 1.75rem;
+	margin-bottom: 1.5em;
+	margin-top: 2.5em;
+}
+h3 {
+	font-size: 1.5rem;
+	margin-bottom: 1em;
+	margin-top: 2em;
+}
+h4 {
+	font-size: 1.25rem;
+	margin-bottom: 1em;
+	margin-top: 1.5em;
+}
+h5 {
+	font-size: 1.125rem;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
+h6 {
+	font-size: 1rem;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+}
+h1:lang(ja) {
+	font-size: 2rem;
+}
+h2:lang(ja) {
+	font-size: 1.4rem;
+}
+h3:lang(ja) {
+	font-size: 1.2rem;
+}
+h4:lang(ja) {
+	font-size: 1rem;
+}
+h5:lang(ja) {
+	font-size: 0.9rem;
+}
+h6:lang(ja) {
+	font-size: 0.8rem;
+}
+
+/* Link */
+a {
+	color: #4693f5;
+	text-decoration: underline;
+}
+
+/* Text */
+p {
+	margin: 0 0 1.6em;
+	font-size: 100%;
+}
+b, strong {
+	font-weight: 700;
+}
+dfn, em, i {
+	font-style: italic !important;
+}
+q {
+	quotes: "" "";
+}
+cite {
+	border-bottom: dotted 1px #999;
+	font-style: normal;
+}
+code, kbd, tt, var {
+	background-color: #f4f5f6;
+	color: #666;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 90%;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #999;
+	cursor: help;
+}
+mark, ins {
+	background-color: #fffad3;
+	text-decoration: none;
+}
+
+/* Table */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-size: 90%;
+	margin: 0 0 1.6em;
+	width: 100%;
+}
+caption {
+	margin-bottom: 0.6em;
+}
+table th, table td {
+	border: solid 1px #eee;
+	padding: 1em 1.2em;
+}
+th {
+	background-color: #f4f5f6;
+	font-weight: 600;
+	text-align: left;
+}
+
+/* Elements */
+blockquote {
+	border: none !important;
+	color: #666;
+	margin: 0 0 2em;
+	padding: 12px 0 0 44px !important;
+	position: relative;
+}
+blockquote:before {
+	color: #ddd;
+	content: "\201C";
+	font-family: Georgia, serif;
+	font-size: 84px;
+	left: -5px;
+	line-height: 1;
+	position: absolute;
+	top: -5px;
+}
+blockquote p {
+	margin-bottom: 0.8em;
+}
+.wp-block-quote__citation,
+.wp-block-pullquote__citation {
+	font-size: 90%;
+	text-transform: none;
+}
+.wp-block-pullquote {
+	border: none;
+	padding: 12px 0;
+}
+address {
+	margin: 0 0 1.6em;
+	font-style: normal;
+}
+pre {
+	background-color: #f4f5f6;
+	color: #666;
+	font-family: Consolas, "Courier New", monospace;
+	font-size: 90%;
+	line-height: 1.4;
+	margin: 0 0 1.7em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+	word-wrap: normal;
+}
+
+/* Button */
+.wp-block-button a {
+	color: #fff;
+	text-decoration: none;
+}
+.wp-block-button a:hover {
+	opacity: 0.9;
+}
+.wp-block-button__link {
+	font-size: 100%;
+	padding: 9px 24px;
+}
+
+/* Layout */
+.wp-block {
+	max-width: 750px;
+}
+.wp-block[data-align="wide"] {
+	max-width: 1150px;
+}
+.wp-block[data-align="full"] {
+	max-width: none;
+}
+
+/* Latest Posts */
+.wp-block-latest-posts {
+	border-top: solid 1px #eee;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+	padding-top: 1em;
+}
+.wp-block-latest-posts li {
+	border-bottom: solid 1px #eee;
+	margin-bottom: 1em;
+	padding-bottom: 1em;
+}
+.wp-block-latest-posts a {
+	text-decoration: none;
+}
+.wp-block-latest-posts__post-date {
+	margin-top: 0.3em;
+}
+
+/* Fist header in column */
+.wp-block-column > h1:first-child,
+.wp-block-column > h2:first-child,
+.wp-block-column > h3:first-child,
+.wp-block-column > h4:first-child,
+.wp-block-column > h5:first-child,
+.wp-block-column > h6:first-child {
+	margin-top: 0;
+}
+
+/* Intro */
+.intro {
+	color: #777;
+	font-size: 120%;
+}
+
+/* Sub Header */
+.subheader {
+	color: #4693f5;
+	font-size: 15px;
+	font-weight: 700;
+	margin-bottom: -15px;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+
+/* For the TinyMCE editor */
+html .mceContentBody {
+	max-width: 720px;
+}

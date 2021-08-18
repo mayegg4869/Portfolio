@@ -1,0 +1,218 @@
+.imageTitle{padding: 10px 0;}
+.rss-inner-page-slider-1{margin:0 auto;}
+.rss-inner-page-slider-1 .slick-dots {
+	position: absolute;
+	width:100%;
+	text-align:center;
+	bottom: 10px;
+	padding:0;
+	margin:0;
+}
+ .rss-inner-page-slider-1 .slick-dots li button {
+	font-size: 0px;
+	line-height: 0px;
+	border: none;
+	background: none;
+}
+ .rss-inner-page-slider-1 .slick-dots li {
+	list-style: none;
+	width: 10px;
+	line-height: 10px;
+	background: #fff;
+	display: block;
+	display: inline-block;
+	border-radius: 10px;
+	margin: 0px 5px;
+	height: 10px;
+	cursor:pointer;
+}
+.rss-inner-page-slider-1 .slick-dots li.slick-active {background: #000000; cursor: default;}
+.rss-inner-page-slider-1 .slick-dots li.slick-active button {
+	cursor: default;
+}
+.rss-inner-page-slider-1 .slickprev {
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	
+	-webkit-transform: translateY(-50%);transform: translateY(-50%);
+	
+	background:rgba(0,0,0,0.5);
+	z-index: 999;
+	cursor: pointer;
+	display:table;
+	color:#fff;
+	text-align:center;
+
+}
+.video-html5{background:#000000;}
+.rss-inner-page-slider-1 .slickprev  i {font-size:24px;}
+.rss-inner-page-slider-1 .slicknext  i {font-size:24px;}
+.rss-inner-page-slider-1 .slicknext {
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	
+	-webkit-transform: translateY(-50%);transform: translateY(-50%);
+	background:rgba(0,0,0,0.5);
+	z-index: 99;
+	cursor: pointer;
+	display:table;
+	color:#fff;
+	text-align:center;
+}
+.rss-inner-page-slider-1 .rss-inner-slider-sec {
+	width: 100%;
+	display: block;
+}
+
+.rss-inner-page-slider-1 .rss-inner-slider-item {
+	height: 449px;
+	background-size: cover;
+	background-position: center center;
+}
+.rss-banner-layer{
+	position:relative;
+	height:100%;
+	overflow: hidden;
+}
+.rss-banner-layer .rss-banner-caption{position:absolute;padding:20px;}
+.rss-banner-title{
+	font-size:30px;
+	font-weight:bold;
+	margin-bottom:15px;
+}
+.rss-banner-description{
+	font-size:16px;
+	margin-bottom:20px;
+}
+.rss-banner-url a{
+	padding:10px 20px;
+	background:#ea6067;
+	color:#fff;
+	display:inline-block;
+}
+.rss-inner-page-slider-1 .slick-list{
+	z-index:99;
+}
+.rss-inner-page-slider-1 .slick-dots li{
+	position:relative;
+	z-index:999;
+}
+/***20-6***/
+.topleft .rss-banner-caption{
+	  top:50px;
+	  left:0px;
+	  text-align:left;
+}
+.topcenter .rss-banner-caption{
+	  top:50px;
+	  left:0;
+	  right:0;
+	  margin:auto;
+	  text-align:center;
+	  margin:0 auto;
+	  display:block;
+	  width:100%;
+} 
+.topright .rss-banner-caption{
+	  top:50px;
+	  right:0px;
+	  text-align:left;
+}
+.centerleft .rss-banner-caption{
+	  top:50%;
+	  transform: translateY(-50%);
+	  -webkit-transform: translateY(-50%);
+	  left:0px;
+	  text-align:left;
+}
+.centercenter .rss-banner-caption{
+	  top:50%;
+	  transform: translateY(-50%);
+	  -webkit-transform: translateY(-50%);
+	  left:0;
+	  right:0;
+	  margin:0 auto;
+	  display:block;
+	  text-align:center;
+	  width:100%;
+}
+.centerright .rss-banner-caption{
+	  top:50%;
+	  transform: translateY(-50%);
+	  -webkit-transform: translateY(-50%);
+	  right:0px;
+	  text-align:left;
+}
+.bottomleft .rss-banner-caption{
+	  bottom:50px;
+	  left:0px;
+	  text-align:left;
+}
+.bottomcenter .rss-banner-caption{
+	  bottom:50px;
+	  left:0;
+	  right:0;
+	  margin:auto;
+	  text-align:center;
+	  margin:0 auto;
+	  display:block;
+	  width:100%;
+}
+.bottomright .rss-banner-caption{
+	  bottom:50px;
+	  right:0px;
+	  text-align:left;
+}
+.rss-banner-layer.container{
+	max-width:100%;
+}
+/***20-6***/
+
+
+
+@media(max-width:767px) {
+	.rss-inner-page-slider-1 .rss-inner-slider-item {height: 300px;}
+	.rss-banner-title{font-size:24px;margin-bottom:10px;}
+	.rss-banner-description{font-size:14px;}
+	.rss-banner-caption{max-width:340px;}
+	.rss-banner-url a{padding:7px 15px;}
+	/***20-6***/
+	.rss-inner-slider-sec .rss-banner-caption{
+		 left: 0;
+		margin: auto;
+		right: 0;
+		text-align: center;
+		top: 50%;
+		transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		bottom:auto;
+	}
+	.rss-inner-slider-sec .rss-banner-caption{
+		max-width:450px;
+	}
+	/***20-6***/
+
+}
+@media(max-width:480px) {
+	.rss-banner-title{font-size:18px;margin-bottom:5px;}
+	.rss-banner-description{font-size:14px;margin-bottom:10px;}
+	.rss-banner-caption{padding:0 29px;}
+	.rss-inner-slider-sec .rss-banner-caption{
+		max-width:290px;
+	}
+	.rss-banner-description {
+		font-size: 13px;
+	}
+	.rss-banner-title {
+		font-size: 16px;
+	}
+	.rss-banner-layer .rss-banner-caption {
+		padding: 15px;
+	}
+	.rss-banner-url a {
+		padding: 4px 8px;
+	}
+	.slick-slide video { height: 100%;}
+}

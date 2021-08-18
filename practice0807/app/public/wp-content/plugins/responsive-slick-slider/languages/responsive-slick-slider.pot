@@ -1,0 +1,327 @@
+# Copyright (C) 2017 Responsive Slick Slider
+# This file is distributed under the same license as the Responsive Slick Slider package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Responsive Slick Slider 1.0.0\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/plugin/responsive-slick-"
+"slider\n"
+"POT-Creation-Date: 2017-04-26 06:07:57+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: admin/class-responsive-slick-slider-admin.php:120
+msgid "Slider"
+msgstr ""
+
+#: admin/class-responsive-slick-slider-admin.php:156
+msgid "Add Slider"
+msgstr ""
+
+#: admin/class-responsive-slick-slider-admin.php:166
+msgid "Slider Options"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:124
+msgid "Post Type / Taxonomy"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:127
+msgid "SELECT"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:156
+msgid "Posts / Terms"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:168
+#: admin/partials/banner_management-admin-display.php:375
+msgid "Slide"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:173
+#: admin/partials/banner_management-admin-display.php:377
+msgid "Banner Type"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:176
+#: admin/partials/banner_management-admin-display.php:198
+#: admin/partials/banner_management-admin-display.php:377
+#: admin/partials/banner_management-admin-display.php:381
+msgid "Image"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:177
+#: admin/partials/banner_management-admin-display.php:377
+msgid "Mp4 Video"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:178
+#: admin/partials/banner_management-admin-display.php:377
+msgid "Youtube Video"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:179
+#: admin/partials/banner_management-admin-display.php:377
+msgid "Vimeo Video"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:191
+#: admin/partials/banner_management-admin-display.php:377
+msgid "Order"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:215
+#: admin/partials/banner_management-admin-display.php:381
+msgid "Ipad Image"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:232
+#: admin/partials/banner_management-admin-display.php:381
+msgid "Mobile Image"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:253
+#: admin/partials/banner_management-admin-display.php:383
+msgid "Title"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:257
+#: admin/partials/banner_management-admin-display.php:383
+msgid "Hide Title in ipad"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:263
+#: admin/partials/banner_management-admin-display.php:383
+msgid "Hide Title in Mobile"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:273
+#: admin/partials/banner_management-admin-display.php:386
+msgid "Content"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:277
+#: admin/partials/banner_management-admin-display.php:386
+msgid "Hide Content in ipad"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:283
+#: admin/partials/banner_management-admin-display.php:386
+msgid "Hide Content in Mobile"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:293
+#: admin/partials/banner_management-admin-display.php:389
+msgid "Url"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:297
+#: admin/partials/banner_management-admin-display.php:389
+msgid "Open Url"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:299
+#: admin/partials/banner_management-admin-display.php:389
+msgid "Existing Tab"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:300
+#: admin/partials/banner_management-admin-display.php:389
+msgid "New Tab"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:308
+#: admin/partials/banner_management-admin-display.php:393
+msgid "Video  Url"
+msgstr ""
+
+#: admin/partials/banner_management-admin-display.php:347
+msgid "+ Add Slide"
+msgstr ""
+
+#: admin/partials/setting.php:19
+msgid "Transition Effects"
+msgstr ""
+
+#: admin/partials/setting.php:24
+msgid "Fade"
+msgstr ""
+
+#: admin/partials/setting.php:25
+msgid "Slide Horizontally"
+msgstr ""
+
+#: admin/partials/setting.php:32
+msgid "Slider Auto Play"
+msgstr ""
+
+#: admin/partials/setting.php:37 admin/partials/setting.php:187
+#: admin/partials/setting.php:224 admin/partials/setting.php:238
+#: admin/partials/setting.php:251
+msgid "Yes"
+msgstr ""
+
+#: admin/partials/setting.php:38 admin/partials/setting.php:186
+#: admin/partials/setting.php:225 admin/partials/setting.php:237
+#: admin/partials/setting.php:252
+msgid "No"
+msgstr ""
+
+#: admin/partials/setting.php:45
+msgid "Auto Play Delay"
+msgstr ""
+
+#: admin/partials/setting.php:46 admin/partials/setting.php:57
+msgid "(ms)"
+msgstr ""
+
+#: admin/partials/setting.php:56
+msgid "Slider Speed"
+msgstr ""
+
+#: admin/partials/setting.php:67
+msgid "Width"
+msgstr ""
+
+#: admin/partials/setting.php:68 admin/partials/setting.php:79
+#: admin/partials/setting.php:117 admin/partials/setting.php:195
+msgid "(px)"
+msgstr ""
+
+#: admin/partials/setting.php:78
+msgid "Height"
+msgstr ""
+
+#: admin/partials/setting.php:89
+msgid "Width Management"
+msgstr ""
+
+#: admin/partials/setting.php:94
+msgid "Full"
+msgstr ""
+
+#: admin/partials/setting.php:95 admin/partials/setting.php:108
+msgid "Fixed"
+msgstr ""
+
+#: admin/partials/setting.php:102
+msgid "Height Management"
+msgstr ""
+
+#: admin/partials/setting.php:107
+msgid "Responsive"
+msgstr ""
+
+#: admin/partials/setting.php:116
+msgid "Content Width"
+msgstr ""
+
+#: admin/partials/setting.php:127
+msgid "Content Position"
+msgstr ""
+
+#: admin/partials/setting.php:136
+msgid "Top Left"
+msgstr ""
+
+#: admin/partials/setting.php:137
+msgid "Top Center"
+msgstr ""
+
+#: admin/partials/setting.php:138
+msgid "Top Right"
+msgstr ""
+
+#: admin/partials/setting.php:139
+msgid "Center Left"
+msgstr ""
+
+#: admin/partials/setting.php:140
+msgid "Center Center"
+msgstr ""
+
+#: admin/partials/setting.php:141
+msgid "Center Right"
+msgstr ""
+
+#: admin/partials/setting.php:142
+msgid "Bottom Left"
+msgstr ""
+
+#: admin/partials/setting.php:143
+msgid "Bottom Center"
+msgstr ""
+
+#: admin/partials/setting.php:144
+msgid "Bottom Right"
+msgstr ""
+
+#: admin/partials/setting.php:151
+msgid "Content Text Color"
+msgstr ""
+
+#: admin/partials/setting.php:161
+msgid "Content Background Color"
+msgstr ""
+
+#: admin/partials/setting.php:171
+msgid "Content Background Opacity"
+msgstr ""
+
+#: admin/partials/setting.php:181
+msgid "Centermode"
+msgstr ""
+
+#: admin/partials/setting.php:194
+msgid "Center Padding"
+msgstr ""
+
+#: admin/partials/setting.php:206
+msgid "Pagination"
+msgstr ""
+
+#: admin/partials/setting.php:211
+msgid "Show"
+msgstr ""
+
+#: admin/partials/setting.php:212
+msgid "Hide"
+msgstr ""
+
+#: admin/partials/setting.php:219
+msgid "Navigation"
+msgstr ""
+
+#: admin/partials/setting.php:232
+msgid "Pause On Hover"
+msgstr ""
+
+#: admin/partials/setting.php:246
+msgid "Video Auto Play"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Responsive Slick Slider"
+msgstr ""
+
+#. #-#-#-#-#  responsive-slick-slider.pot (Responsive Slick Slider 1.0.0)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  responsive-slick-slider.pot (Responsive Slick Slider 1.0.0)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "#"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Responsive Slick Slider is built on the top of slick js with support to "
+"unlimited banner images, text layers and videos(YouTube, Mp4, HTML5 and "
+"Vimeo)."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Vsourz Digital"
+msgstr ""
