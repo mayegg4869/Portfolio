@@ -15,7 +15,7 @@
                 } else {
                     echo "$i";
                 }
-                echo "<br>";
+                echo PHP_EOL;
             }
         ?>
     </body>
