@@ -1,4 +1,3 @@
-
 /*----------------------------------*/
 /* CSSリセット
 html5doctor.com Reset Stylesheet
@@ -109,88 +108,252 @@ input, select {
   以下CSS設定
 ------------------------------------------------------------
 */
+
+html {
+    overflow-x: hidden;
+    font-family: 'M PLUS 1p', sans-serif;
+}
 body {
-    background-color: #000000;
-    background-image: url(img/43.gif);
-    background-repeat: repeat-y;
-    text-align: center;
-    color: #fff;
-
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    width: 100%;
+    color:rgb(46, 46, 46);
     }
-
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap:wrap;
+    padding-left: 0;
+}
 header{
-    margin: 2rem auto;
-}
-p{
-    margin: 1rem auto;
-}
-span.del {
-    text-decoration-line: line-through;
-    text-decoration-style: solid;
-  }
-
-a {
-    color:#FFF;
-}
-a:hover {
-    color:#FF0099;
+    min-height: 180px;
+    height: 30vh;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("img/twitter-yellow37.jpg");
+    text-align: center;
+    }
+footer {
+    text-align: center;
+    padding: 0.5em;
+    background-color: #ff3f89;
+    color: #f3f3f3;
     }
 
 
-.contents{
-    margin: 0 auto;
-    padding: 1rem;
-    width: 80%;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    color: #1b1b1b;
-}
-.contents_inbox{
-    width: 80%;
-    text-align: left;
-}
-.contents a {
-color: #1b1b1b;
-}
-.contents a:hover{
-        color:#FF0099;
+/* 
+-------------------------
+  ローディング
+-------------------------
+*/
+#loading {
+    width: 100vw;
+    height: 100vh;
+    transition: all 0.5s;
+    background-color: #ff3f89;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+  .spinner {
+    background-image: url("img/loading.png");
+    width: 128px;
+    height: 128px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    animation:gorilla 1s infinite;
+  }
+  /* ローディングアニメーション */
+  @keyframes gorilla {
+    0% {
+        transform:rotate(0deg);
+    }
+    100% {
+        transform:rotate(360deg);
+    }
+  }
+  .loaded {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+/* 
+-------------------------
+  タブメニュー
+-------------------------
+*/
+/*ベース*/
+section.tab_content{
+	display: flex;
+	flex-wrap: wrap;
 }
 
-  details {
-    margin: 1.5rem auto;
-    width: 80%;
-    height: 1.5rem;
-    transition: .5s;
+section.tab_content .tabLabel {	/* タブ */
+	text-align: center;
+	padding: 3px 12px;
+	flex: 1;
+	order: -1;
+	color:rgb(46, 46, 46);
+	transition: .5s ;
+	cursor: pointer;
+    border-bottom: solid 2px transparent;
+}
+section.tab_content .tabLabel:nth-last-of-type(1){ margin-right: 0; }
+section.tab_content input {		/* ラジオボタン非表示 */
+	display: none;
+}
+section.tab_content .content {	/* 本文 */
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+/*アクティブ設定*/
+section.tab_content input:checked + .tabLabel {
+    border-bottom: solid 2px #ff3f89;
+    transition: all 0.4s ease-out;
+}
+section.tab_content input:checked + .tabLabel + .content {
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 96vw;
+	height: auto;
+	transition: .5s opacity;
+	opacity: 1;
+    text-align: center;
+}
+
+section h1{
+    padding: 1em;
+    font-size: 200%;
+}
+
+section h2 {
+    font-size: 130%;
+    position: absolute;
+    top: -1em;
+    background-color: rgba(255,255,255,.4);
+    border-left:2px dotted rgba(0,0,0,.1);
+    border-right:2px dotted rgba(0,0,0,.1);
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+    padding: 0.5em 3em;
+    transform: rotate(-3deg);
+    font-family: 'Yusei Magic', sans-serif;
+}
+  
+.picture img {
+    width: 32vw;
+    height: 32vw;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
   }
-  details[open] {
-    width: 80%;
-    height: auto;
-    padding-bottom: 3rem;
-  }
+
+.code li {
+    margin: 1.5em auto;
+    width: 30vw;
+    position: relative;
+    background: #F8F0D7;
+    border-left:4px dotted rgba(0,0,0,.1);
+    border-right:4px dotted rgba(0,0,0,.1);
+    box-shadow:0 0 5px rgba(0,0,0,.2);
+    padding: 1em;
+}
+
+.code img {
+    width: 100%;
+    object-fit: contain;
+    font-family: 'object-fit: contain;';
+    border-radius: 1em;
+}
+
+.code_comment {
+    margin: 1em 0;
+    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
+    background-size: 100% 2.5em; 
+    line-height: 2.5em;
+    padding-bottom: 1px;
+}
+/* 
+-------------------------
+  コンテンツ
+-------------------------
+*/
+.contain{
+    flex: 1;
+    padding: 2rem 0;
+    background-color: #f3f3f3;
+    filter: drop-shadow(0px -5px 5px rgba(120, 120, 120, 0.5));
+    }
+
 .profile{
     margin: 0 auto;
-    width: 30%;
-    padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 10px;
-    color: #1b1b1b;
+    padding: 2rem 0;
+    width: 70%;
+    }
+.profile img{
+    margin-top: -170px;
+    bottom:0;
+    margin-left: 2em;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 10px solid #ff3f89;
+    transition: .5s;
+    }
+
+.profile dl {
+    padding: 0.5em;
+    overflow: hidden;
+    width: auto;
+  }
+  .profile dt {
+    padding: 0.3em;
+    font-weight: bolder;
+    color: #ff3f89;
+  }
+  .profile dd{
+    padding-left: 2em;
+  }
+  .caption{
+    padding: 1.5em;
+  }
+
+/* 
+------------------------------------------------------------
+  以下CSS設定(レスポンシブ)
+------------------------------------------------------------
+*/
+@media screen and (max-width: 1500px) { /*ウィンドウ幅が1500px以下の場合に適用*/
+    header{
+        background-size: 1500px 500px;
+        }
+}
+@media screen and (max-width: 1024px) { /*ウィンドウ幅が1000px以下の場合に適用*/
+  .profile{
+       width: 90%;
+   }
+   .profile img{
+    width: 140px;
+    height: 140px;
+    border: 5px solid #ff3f89;
+   }
+   section.tab_content input:checked + .tabLabel + .content {
+    width: 90vw;
+    }
+    .code li {
+        width: 100vw;
+    }
+    .picture img {
+        width: 30vw;
+        height: 30vw;
+    }
 }
 
-
-  @media only screen and (max-width: 930px) {
-    .contents{
-        width: 100%;
-    }
-    .contents_inbox{
-        width: 100%;
-    }
-    details {
-        width: 100%;
-      }
-      details[open] {
-        width: 100%;
-      }
-      .profile{
-        width: 100%;
-    }
-}

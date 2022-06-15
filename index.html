@@ -1,101 +1,132 @@
-<!doctype html>
-<html lang="ja">
+<!DOCTYPE html>
+<html lang="JP">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Welcome to the may's Homepage!</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>may's Portfolio</title>
 <link rel="icon" href="favicon.ico">
-<link rel="stylesheet" type="text/css" href="slick/slick.css" media="screen" />
-<link rel="stylesheet" type="text/css" href="slick/slick-theme.css" media="screen" />
 <link rel="stylesheet" href="style.css">
+    <!-- JQuery 3.6.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- JQueryココマデ -->
+
+    <!-- fancybox -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <!-- fancyboxココマデ -->
+
+    <!-- ウェブフォント -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=M+PLUS+1p&family=Yusei+Magic&display=swap');
+    </style>
+    <!-- ウェブフォントココマデ -->
 </head>
 
-
 <body>
-<header>
-    <marquee direction="left" scrollamount="14" behavior="alternate"><font size="7"><b><font color="#ff0000">W</font><font color="#ff3500">e</font><font color="#ff6a00">l</font><font color="#ff9f00">c</font><font color="#ffd400">o</font><font color="#ffff00">m</font><font color="#f4ff00">e</font> <font color="#8aff00">t</font><font color="#55ff00">o</font> <font color="#00ff00">t</font><font color="#00ff15">h</font><font color="#00ff4a">e</font> <font color="#00ffb4">M</font><font color="#00ffe9">a</font><font color="#00ffff">y</font><font color="#00dfff">'</font><font color="#00a9ff">s</font> <font color="#003fff">H</font><font color="#000aff">o</font><font color="#0000ff">m</font><font color="#2a00ff">e</font><font color="#5f00ff">p</font><font color="#9400ff">a</font><font color="#c900ff">g</font><font color="#ff00ff">e</font><font color="#ff00ff">!</font></b></font></marquee>      
-</header>
+<!-- ローディング画面 -->
+<div id="loading"><div class="spinner"></div></div>
+<!-- ローディングココマデ -->
+<!-- ヘッダ画像 -->
+<header></header>
+<!-- ヘッダ画像ココマデ -->
 
-    <p>あなたは　10000人目のお客様です！<br>
-        キリ番踏み逃げ禁止！</p>
-    <img src="img/011.gif">
+<!-- メイン -->
+<div class="contain">
+    <!-- プロフィールエリア -->
+    <div class="profile">
+        <img src="img/profile.png">
+        <dl><dt>Name</dt><dd>may.E</dd></dl>
+        <dl><dt>Skill</dt><dd>Code : HTML / CSS / Javascript / PHP</dd><dd>Design : Photoshop / Illustrator / Clip Studio Paint</dd></dl>
+        <p class="caption">ゴリラが好きです</p>
+    </div>
+    <!-- プロフィールココマデ -->
 
-    <h1>Contents</h1>
-
-    <details>
-        <summary>WEB講習会の成果物</summary>
-        <div class="contents">
-            <div class="contents_inbox">
-                <h1>04/10　JS課題「フォームのデータ受け渡し／JSを動かそう」</h1>
-            ■GitHub■<br>
-            <a href="https://github.com/mayegg4869/Portfolio/tree/master/210410">https://github.com/mayegg4869/Portfolio/tree/master/210410</a><br>
-            ■GitHub Pages■<br>
-            <a href="https://mayegg4869.github.io/Portfolio/210410/">https://mayegg4869.github.io/Portfolio/210410/</a>
-            <br>
-            <br>
-            <h1>05/08　JS課題「インプット要素で入力した数字分ループ」</h1>
-            ■GitHub■<br>
-            <a href="https://github.com/mayegg4869/Portfolio/tree/master/210508">https://github.com/mayegg4869/Portfolio/tree/master/210508</a><br>
-            ■GitHub Pages■<br>
-            <a href="https://mayegg4869.github.io/Portfolio/210508/">https://mayegg4869.github.io/Portfolio/210508/</a>
-            <br>
-            <br>
-            <h1>06/12　ロジック課題１「for文とif文を使いこなそう」</h1>
-            ■GitHub■<br>
-            <a href="https://github.com/mayegg4869/Portfolio/tree/master/210612">https://github.com/mayegg4869/Portfolio/tree/master/210612</a><br>
-            ■GitHub Pages■<br>
-            <a href="https://mayegg4869.github.io/Portfolio/210612/">https://mayegg4869.github.io/Portfolio/210612/</a>
-            <br>
-            <br>
-            <h1>07/10　ロジック課題２「クイズを作ろう・Slickを使おう・CSSをJSで書き換えよう」</h1>
-            ■GitHub■<br>
-            <a href="https://github.com/mayegg4869/Portfolio/tree/master/210710">https://github.com/mayegg4869/Portfolio/tree/master/210710</a><br>
-            ■GitHub Pages■<br>
-            <a href="https://mayegg4869.github.io/Portfolio/210710/">https://mayegg4869.github.io/Portfolio/210710/</a>
-            </div>
+    <!-- セクションエリア -->
+    <section class="tab_content">
+        <!-- ピクチャエリア -->
+        <input id="content_picture" type="radio" name="tab_content" checked="checked">
+        <label class="tabLabel" for="content_picture"><img src="img/tab_image.png"><p>Picture</p></label>
+        <div class="content">
+            <ul class="picture">
+                <li><a href="img/illust_06.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/06" ><img src="img/illust_06.jpg" width="100%"></a></li>
+                <li><a href="img/illust_05.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/04"><img src="img/illust_05.jpg" width="100%"></a></li>
+                <li><a href="img/illust_04.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22バレンタイン"><img src="img/illust_04.jpg" width="100%"></a></li>
+                <li><a href="img/illust_03.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　21秋"><img src="img/illust_03.jpg" width="100%"></a></li>
+                <li><a href="img/illust_02.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　21春"><img src="img/illust_02.jpg" width="100%"></a></li>
+                <li><a href="img/illust_01.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　20冬"><img src="img/illust_01.jpg" width="100%"></a></li>
+                <li><a href="img/illust_SD01.png"  data-fancybox="gallery" data-caption="オブちゃんTシャツイラスト　宇宙オブちゃん"><img src="img/illust_SD01.png" width="100%"></a></li>
+                <li><a href="img/illust_SD02.png"  data-fancybox="gallery" data-caption="オブちゃんTスライド用イラスト"><img src="img/illust_SD02.png" width="100%"></a></li>
+            </ul>
         </div>
-    </details>
-    <details>
-        <summary>WEBサイトポートフォリオ</summary>
-        <div class="contents">
-            <div class="contents_inbox">
-                <h1>20/08 しらゆき園</h1>
-                ◆Github<br>
-                <a href="https://github.com/mayegg4869/Portfolio/tree/master/website_01">https://github.com/mayegg4869/Portfolio/tree/master/website_01</a><br>
-                ◆Github Pages<br>
-                <a href="https://mayegg4869.github.io/Portfolio/website_01/">https://mayegg4869.github.io/Portfolio/website_01/</a>              
+        <!-- ピクチャココマデ -->
+        <!-- コードエリア -->
+        <input id="content_code" type="radio" name="tab_content">
+        <label class="tabLabel" for="content_code"><img src="img/tab_code.png"><p>Code</p></label>
+        <div class="content code">
+            <h1>WebSite</h1>
+            <ul>
+                <li><h2>しらゆき園</h2><br>
+                <img src="img/portfolio_01.png" width="100%"><br>
+                <div class="code_comment">
+                    <p>架空の保育園を想定したWebサイトです。</p>
+                    <p>基本的な要素や可愛らしい配色にこだわりました。</p>
+                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/website_01">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/website_01/">GitHub Pages</a>              
                 </div>
-    </div>
-    </details>
-    <details>
-        <summary>イラスト・デザイン</summary>
-        <div class="contents">
-        <div class="contents_image">
-            <p><a href="https://twitter.com/OBG_koho/status/1366282312346869764">
-                <img src="img/illust01.jpg" width="50%"><br>
-                オブちゃん社内ポスター（冬）</a></p>
-            <p><a href="https://twitter.com/OBG_koho/status/1382601374781698049">
-                <img src="img/illust02.jpg" width="50%"><br>
-                オブちゃん社内ポスター（春）</a></p>
-            <p><a href="https://suzuri.jp/shirimori/7838189/t-shirt/m/white">
-                <img src="img/illust03.png" width="100%"><br>
-                宇宙オブちゃんTシャツデザイン</a></p>
+                </li>
+            </ul>
+
+            <h1>Various</h1>
+            <ul>
+                <li><h2>フォトギャラリー</h2><br>
+                <div class="code_comment">
+                    <p>【2206講習会】</p>
+                    <p>様々なライブラリを利用したフォトギャラリーの例</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/220611">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220611/">GitHub Pages</a>              
+                </div>
+                </li>
+                <li><h2>カウントダウンページ</h2><br>
+                    <div class="code_comment">
+                        <p>【2204講習会】課題</p>
+                        <p>Javascriptを用いたカウントダウンの表示、オープン後の出し分け表示など</p>
+                        <a href="https://github.com/mayegg4869/kadai/tree/master/220409">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220409">GitHub Pages</a>              
+                    </div>
+                    </li>
+            </ul>
         </div>
-    </div>
-    </details>
-    <span class="del">日記</span>　工事中<br>
-    <span class="del">掲示板</span>　工事中<br>
-    <span class="del">リンク</span>　工事中<br>
+        <!-- コードココマデ -->
+    </section>
+    <!-- セクションココマデ -->
+</div>
+<!-- メインココマデ -->
+
+<!-- フッターエリア -->
+<footer></footer>
+<!-- フッターココマデ -->
+
+<!-- JS -->
+<script type="text/javascript">
+    //ローディング
+    window.onload = function() {
+    const spinner = document.getElementById('loading');
+    spinner.classList.add('loaded');
+    };
+
+    //fancyboxのオプション
+    $(document).ready(function() {
+        $('[data-fancybox]').fancybox({
+            animationEffect: "zoom-in-out",
+            loop : true,
+            smallBtn : true
+        });
+    });
     
 
 
-<img src="img/011.gif">
 
-<p>素材：<a href="http://fairy-tail.com/">Fairy Tail</a></p>
-<div class="profile">
-Mayo Eguchi<br>
-webデザイナー・デザイナー・イラストレーター（になりたい）
-</div>
 
+
+</script>
+<!-- JSココマデ -->
 </body>
 </html>
