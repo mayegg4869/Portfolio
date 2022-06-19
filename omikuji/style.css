@@ -17,7 +17,7 @@ body{
 }
 
 footer {
-    position: fixed;
+    position: absolute;
     width: 100%;
     padding-top: 2em;
     text-align: center;
@@ -43,11 +43,8 @@ a {
 
 /*--- ラップ ---*/
 #wrap {
+    position: relative;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
 }
 
 /*--- コンテンツ部分 ---*/
@@ -57,7 +54,10 @@ a {
     text-align: center;
     display: flex;
     justify-content: center;
-    flex: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 /*--- おみくじを引くボタン・結果表示エリア ---*/
 #omikuji {
@@ -218,10 +218,14 @@ a {
 /*--- モバイル対応 ---*/
 @media screen and (max-width: 1024px) { /*ウィンドウ幅が1024px以下の場合に適用*/
     #contents {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
         width: 100%;
         display: block;
-        margin-top: 3em;
-        margin-bottom: 5em;
+        padding-top: 3em;
+        padding-bottom: 5em;
     }
 
     .chara_area {
