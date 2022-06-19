@@ -2,6 +2,23 @@
 // 共通部分
 // -----------------------------------------
 
+// 画像のpreload
+var images = [
+    'img/chara.png',
+    'img/omikuji.png',
+    'img/daikichi.jpg',
+    'img/chuukichi.jpg',
+    'img/shoukichi.jpg',
+    'img/suekichi.jpg',
+];
+window.onload = function(){
+    // 画像プリロード
+    for (i = 0; i < images.length; i++){
+        var img = document.createElement('img');
+        img.src = images[i];
+    }
+}
+
 // 日時取得
 let date = new Date();
 let nowday = date.getDate();
