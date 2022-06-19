@@ -9,15 +9,9 @@ var images = [
     'img/daikichi.jpg',
     'img/chuukichi.jpg',
     'img/shoukichi.jpg',
-    'img/suekichi.jpg',
+    'img/suekichi.jpg'
 ];
-window.onload = function(){
-    // 画像プリロード
-    for (i = 0; i < images.length; i++){
-        var img = document.createElement('img');
-        img.src = images[i];
-    }
-}
+
 
 // 日時取得
 let date = new Date();
@@ -55,6 +49,17 @@ function musicPlay(){
       }
 }
 
+//すべて読み込んだときの処理
+window.onload = function(){
+    // 画像プリロード
+    for (i = 0; i < images.length; i++){
+        var img = document.createElement('img');
+        img.src = images[i];
+    }
+    // ローディング終了
+    const loader = document.getElementById('loader');
+    loader.classList.add('loaded');
+}
 // -----------------------------------------
 // その日すでに占っていたら
 // -----------------------------------------
