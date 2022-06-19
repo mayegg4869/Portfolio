@@ -111,6 +111,25 @@ a {
     margin-left: -10px;
 }
 
+/*--- ボタン ---*/
+.btn {
+    padding: 2em 5em;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+    background: rgb(194, 65, 65);
+    border: 3px solid rgb(230, 230, 230);
+    transition: all .2s;
+}
+
+.btn:hover,
+.btn:active {
+    color: rgb(194, 65, 65);
+    background-color: rgb(230, 230, 230);
+}
+
 /*--- おみくじを振る演出 ---*/
 #omikuji_shake {
     position: fixed;
@@ -122,6 +141,9 @@ a {
     visibility: hidden;
     opacity: 0;
     background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .view{
     visibility: visible!important;
@@ -167,30 +189,32 @@ a {
 }
 
 #omikuji_shake .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    z-index: 9999;
 }
 
-/*--- ボタン ---*/
-.btn {
-    padding: 2em 5em;
-    text-align: center;
-    font-size: large;
-    font-weight: bolder;
-    text-decoration: none;
-    color: rgb(230, 230, 230);
-    background: rgb(194, 65, 65);
-    border: 3px solid rgb(230, 230, 230);
-    transition: all .2s;
+/*--- 結果表示の演出 ---*/
+.result {
+    animation: boyon 0.5s ease;
 }
+@keyframes boyon {
+    0% {
+      transform: scale(1.1);
+    }
+    25% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    75% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1.0);
+    }
+  }
 
-.btn:hover,
-.btn:active {
-    color: rgb(194, 65, 65);
-    background-color: rgb(230, 230, 230);
-}
+
 
 /*--- モバイル対応 ---*/
 @media screen and (max-width: 1024px) { /*ウィンドウ幅が1024px以下の場合に適用*/
