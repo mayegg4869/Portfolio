@@ -1,0 +1,221 @@
+/*--- 共通部分 ---*/
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: rgb(45, 45, 45);
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    padding-top: 2em;
+    text-align: center;
+    bottom: 0;
+    background: linear-gradient(to top, #ffffff, transparent);
+}
+
+a {
+    color: rgb(194, 65, 65);;
+}
+
+/*--- ミュートボタン ---*/
+#mute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.5em;
+}
+.material-symbols-outlined {
+    color:rgb(54, 54, 54);
+    filter: drop-shadow(0px 0px 2px rgba(255, 255, 255, 1));
+}
+
+/*--- ラップ ---*/
+#wrap {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/*--- コンテンツ部分 ---*/
+#contents{
+    width: 70%;
+    max-width: 1024px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+/*--- おみくじを引くボタン・結果表示エリア ---*/
+#omikuji {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+#omikuji img {
+    margin-left: 1em;
+    border-radius: 1em;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.6));
+}
+
+/*--- キャラ表示エリア ---*/
+.chara_area {
+    width: 50%;
+}
+.chara_area img {
+    animation: chara_motion 3s infinite;
+}
+@keyframes chara_motion {
+    0% {
+        transform: scale(1, 1);
+    }
+    50% {
+        transform: scale(0.98, 0.95)
+    }
+}
+/*--- フキダシ ---*/
+.chara_area p {
+    width: 0 auto;
+    padding: 5em 2em;
+    position: relative;
+    display: inline-block;
+    color:rgb(67, 67, 67);
+    background-color: #ffffff;
+    border-radius: 1em;
+    filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.6));
+}
+.chara_area p:before {
+    content: '';
+    position: absolute;
+    display: block;
+    z-index: 1;
+    border-style: solid;
+    border-color: #ffffff transparent;
+    border-width: 30px 10px 0 10px;
+    bottom: -28px;
+    left: 50%;
+    margin-left: -10px;
+}
+
+/*--- おみくじを振る演出 ---*/
+#omikuji_shake {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9998;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.view{
+    visibility: visible!important;
+    opacity: 1!important;
+    transition: 1s!important;
+}
+
+#omikuji_shake img {
+    position: absolute;
+    height: 70vh;
+    width: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.shake{
+    animation: yureru-s 2s infinite;
+}
+@keyframes yureru-s {
+    0% {
+        transform: translate(4px, 0px);
+    }
+    5% {
+        transform: translate(-4px, 0px);
+    }
+    10% {
+        transform: translate(4px, 0px);
+    }
+    15% {
+        transform: translate(-4px, 0px);
+    }
+    20% {
+        transform: translate(4px, 0px);
+    }
+    25% {
+        transform: translate(-4px, 0px);
+    }
+    30% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#omikuji_shake .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+/*--- ボタン ---*/
+.btn {
+    padding: 2em 5em;
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
+    background: rgb(194, 65, 65);
+    border: 3px solid rgb(230, 230, 230);
+    transition: all .2s;
+}
+
+.btn:hover,
+.btn:active {
+    color: rgb(194, 65, 65);
+    background-color: rgb(230, 230, 230);
+}
+
+/*--- モバイル対応 ---*/
+@media screen and (max-width: 1024px) { /*ウィンドウ幅が1024px以下の場合に適用*/
+    #contents {
+        width: 100%;
+        display: block;
+    }
+
+    .chara_area {
+        margin: 0 auto;
+        width: 70%;
+    }
+    .chara_area p{
+        padding: 1.5em 1em;
+    }
+    #omikuji {
+        margin: 0 auto;
+        padding: 0;
+    }
+    #omikuji img {
+        margin-left: 0;
+    }
+
+    .btn {
+    width: 100%;
+    padding: 2em 1em;
+    }
+  }

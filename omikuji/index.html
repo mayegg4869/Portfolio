@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="JP">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>きつねのおみくじ</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+<div id="wrap">
+    <button id="mute" onclick="musicPlay()"><span class="material-symbols-outlined">volume_off</span></button>
+    <div id="contents">
+        <div class="chara_area">
+            <p class="comment">今日の運勢はなんじゃろな？</p>
+            <img src="img/chara.png" width="100%">
+        </div>
+        <div id="omikuji">
+            <a class="btn"  href="javascript:void(0);" onclick="buttonClick();">おみくじを引く</a>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>by <a href="https://mayegg4869.github.io/Portfolio/">mayegg</a></p>
+    <p>Picture by <a href="https://www.ac-illust.com/">Illust AC</a> / BGM by <a href="https://dova-s.jp/">DOVA-SYNDROME</a> / Sound by <a href="https://pocket-se.info/">ポケットサウンド</p>
+</footer>
+<script src="omikuji.js"></script>
+</body>
+</html>
