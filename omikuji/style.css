@@ -17,7 +17,7 @@ body{
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     width: 100%;
     padding-top: 2em;
     text-align: center;
@@ -197,6 +197,7 @@ a {
     #contents {
         width: 100%;
         display: block;
+        padding: 3em auto ;
     }
 
     .chara_area {
