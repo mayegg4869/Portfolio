@@ -197,7 +197,8 @@ a {
     #contents {
         width: 100%;
         display: block;
-        padding: 3em auto ;
+        margin-top: 3em;
+        margin-bottom: 5em;
     }
 
     .chara_area {
