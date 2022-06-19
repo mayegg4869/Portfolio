@@ -47,6 +47,9 @@ if (nowday == storageLastday) {
     var storageLastUnseiText = localStorage.getItem('lastUnseiText');
     document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + storageLastUnseiText + 'じゃ！<br>また明日来て欲しいのじゃ！');
     document.querySelector('#omikuji').innerHTML = '<img src="img/' + storageLastUnsei + '.jpg" class="result">';
+} else {
+    // 日付が変わっていたらlocalstorageをクリア
+    localStorage.clear()
 }
 
 // -----------------------------------------
