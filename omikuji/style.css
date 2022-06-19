@@ -148,7 +148,6 @@ a {
 .view{
     visibility: visible!important;
     opacity: 1!important;
-    transition: 1s!important;
 }
 
 #omikuji_shake img {
