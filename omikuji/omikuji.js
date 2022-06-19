@@ -12,8 +12,8 @@ if ( nowtime > 18 || 6 > nowtime) { //19時以降もしくは6時以前
 }
 
 // BGMとSEの読み込み
-let music = new Audio('music.mp3');
-let sound = new Audio('sound.mp3');
+let music = new Audio('music/music.mp3');
+let sound = new Audio('music/sound.mp3');
 // BGM再生
 music.loop = true;
 music.muted = true;
