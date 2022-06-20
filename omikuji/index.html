@@ -8,9 +8,14 @@
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<!-- Material Symbols -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,700,1,0" />
+<!-- Material Symbolsココマデ -->
+
 </head>
 <body>
+<!-- ローディング -->
     <div id="loader">
         <div class="sk-folding-cube">
             <div class="sk-cube1 sk-cube"></div>
@@ -19,24 +24,34 @@
             <div class="sk-cube3 sk-cube"></div>
         </div>
     </div>
-<div id="wrap">
+<!-- ローディングココマデ -->
 
-    <button id="mute" onclick="musicPlay()"><span class="material-symbols-outlined">volume_off</span></button>
+<!-- メイン -->
+<div id="wrap">
+    <!-- ボリュームボタン -->
+    <button id="mute" onclick="musicPlay()"><span class="material-symbols-rounded">volume_off</span></button>
+    <!-- コンテンツ -->
     <div id="contents">
+        <!-- キャラ -->
         <div class="chara_area">
             <p class="comment">今日の運勢はなんじゃろな？</p>
             <img src="img/chara.png" width="100%">
         </div>
+        <!-- ボタン/結果 -->
         <div id="omikuji">
             <a class="btn"  href="javascript:void(0);" onclick="buttonClick();">おみくじを引く</a>
         </div>
     </div>
+    <!-- フッター -->
     <footer>
         <p>by <a href="https://mayegg4869.github.io/Portfolio/">mayegg</a></p>
-        <p>Picture by <a href="https://www.ac-illust.com/">Illust AC</a> / BGM by <a href="https://dova-s.jp/">DOVA-SYNDROME</a> / Sound by <a href="https://pocket-se.info/">ポケットサウンド</p>
+        <p><a href="https://www.ac-illust.com/">Illust AC</a> / <a href="https://dova-s.jp/">DOVA-SYNDROME</a> / <a href="https://pocket-se.info/">ポケットサウンド</p>
     </footer>
-    
 </div>
+<!-- メインココマデ -->
+
+<!-- JS -->
 <script src="omikuji.js"></script>
+<!-- JSココマデ -->
 </body>
 </html>

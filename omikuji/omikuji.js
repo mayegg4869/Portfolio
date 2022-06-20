@@ -12,7 +12,6 @@ var images = [
     'img/suekichi.jpg'
 ];
 
-
 // 日時取得
 let date = new Date();
 let nowday = date.getDate();
@@ -40,11 +39,11 @@ function musicPlay(){
     if(music.muted == true){
         music.play();
         music.muted = false;
-        mute.innerHTML = '<span class="material-symbols-outlined">volume_up</span>';
+        mute.innerHTML = '<span class="material-symbols-rounded">volume_up</span>';
         // console.log(music.muted);
       }else{
         music.muted = true;
-        mute.innerHTML = '<span class="material-symbols-outlined">volume_off</span>';
+        mute.innerHTML = '<span class="material-symbols-rounded">volume_off</span>';
         // console.log(music.muted);
       }
 }
