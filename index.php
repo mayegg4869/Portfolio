@@ -6,21 +6,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
 <title>may's Portfolio</title>
 <link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
-    <!-- JQuery 3.6.0 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- JQueryココマデ -->
 
-    <!-- fancybox -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
-    <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <!-- fancyboxココマデ -->
 
     <!-- ウェブフォント -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=M+PLUS+1p&family=Yusei+Magic&display=swap');
     </style>
     <!-- ウェブフォントココマデ -->
+
+    <?php 
+            require("random.php");
+    ?>
 </head>
 
 <body>
@@ -35,19 +33,34 @@
 <div class="contain">
     <!-- プロフィールエリア -->
     <div class="profile">
-        <img src="img/profile.png">
-        <dl><dt>Name</dt><dd>mayegg</dd></dl>
+        <div class="profile_box">
+            <img src="img/profile.png">
+                <div class="random">
+                <?php 
+                    echo "$random_text";
+                ?>
+                </div>
+        </div>
+
+        <dl><dt>Name</dt><dd>may.E</dd></dl>
         <dl><dt>Skill</dt><dd>Code : HTML / CSS / Javascript / PHP</dd><dd>Design : Photoshop / Illustrator / Clip Studio Paint</dd></dl>
         <p class="caption">ゴリラが好きです</p>
+
     </div>
     <!-- プロフィールココマデ -->
+    </div>
 
-    <!-- セクションエリア -->
-    <section class="tab_content">
-        <!-- ピクチャエリア -->
-        <input id="content_picture" type="radio" name="tab_content" checked="checked">
-        <label class="tabLabel" for="content_picture"><img src="img/tab_image.png"><p>Picture</p></label>
-        <div class="content">
+
+<!--タブ-->
+<ul class="tab-group">
+	<li class="tab is-active"><img src="img/tab_image.png"><p>Picture</p></li>
+	<li class="tab"><img src="img/tab_code.png"><p>Code</p></li>
+</ul>
+
+<!--タブを切り替えて表示するコンテンツ-->
+<div class="panel-group">
+	<div class="panel is-show">
+    <div class="content">
             <ul class="picture">
                 <li><a href="img/illust_06.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/06" ><img src="img/illust_06.jpg" width="100%"></a></li>
                 <li><a href="img/illust_05.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/04"><img src="img/illust_05.jpg" width="100%"></a></li>
@@ -59,12 +72,11 @@
                 <li><a href="img/illust_SD02.png"  data-fancybox="gallery" data-caption="オブちゃんTスライド用イラスト"><img src="img/illust_SD02.png" width="100%"></a></li>
             </ul>
         </div>
-        <!-- ピクチャココマデ -->
-        <!-- コードエリア -->
-        <input id="content_code" type="radio" name="tab_content">
-        <label class="tabLabel" for="content_code"><img src="img/tab_code.png"><p>Code</p></label>
-        <div class="content code">
-            <h1>WebSite</h1>
+    </div>
+
+	<div class="panel">
+    <div class="content code">
+            <h1>#WebSite</h1>
             <ul>
                 <li><h2>しらゆき園</h2><br>
                 <img src="img/portfolio_01.png" width="100%"><br>
@@ -74,9 +86,19 @@
                     <a href="https://github.com/mayegg4869/Portfolio/tree/master/website_01">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/website_01/">GitHub Pages</a>              
                 </div>
                 </li>
+
+                <li><h2>きつねのおみくじ</h2><br>
+                <img src="img/portfolio_02.png" width="100%"><br>
+                <div class="code_comment">
+                    <p>JSを使用したおみくじWebアプリです。</p>
+                    <p>基本的な乱数やlocalStorageを使用した1日1回制限、</p>
+                    <p>BGMの使用など簡素ながら細かく盛り込みました。</p>
+                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/omikuji">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/omikuji/">GitHub Pages</a>              
+                </div>
+                </li>
             </ul>
 
-            <h1>Various</h1>
+            <h1>#Various</h1>
             <ul>
                 <li><h2>フォトギャラリー</h2><br>
                 <div class="code_comment">
@@ -91,42 +113,29 @@
                         <p>Javascriptを用いたカウントダウンの表示、オープン後の出し分け表示など</p>
                         <a href="https://github.com/mayegg4869/kadai/tree/master/220409">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220409">GitHub Pages</a>              
                     </div>
-                    </li>
+                </li>
             </ul>
         </div>
-        <!-- コードココマデ -->
-    </section>
-    <!-- セクションココマデ -->
+    </div>
 </div>
+
+
 <!-- メインココマデ -->
 
 <!-- フッターエリア -->
 <footer></footer>
 <!-- フッターココマデ -->
 
+<!-- JQuery 3.6.0 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- JQueryココマデ -->
+
+<!-- fancybox -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!-- fancyboxココマデ -->
 <!-- JS -->
-<script type="text/javascript">
-    //ローディング
-    window.onload = function() {
-    const spinner = document.getElementById('loading');
-    spinner.classList.add('loaded');
-    };
-
-    //fancyboxのオプション
-    $(document).ready(function() {
-        $('[data-fancybox]').fancybox({
-            animationEffect: "zoom-in-out",
-            loop : true,
-            smallBtn : true
-        });
-    });
-    
-
-
-
-
-
-</script>
+<script src="js/script.js"></script>
 <!-- JSココマデ -->
 </body>
 </html>
