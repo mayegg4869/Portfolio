@@ -1,3 +1,108 @@
+/*----------------------------------*/
+/* CSSリセット
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+ /*----------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+body {
+    line-height:1;
+}
+ 
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+ 
+nav ul {
+    list-style:none;
+}
+ 
+blockquote, q {
+    quotes:none;
+}
+ 
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+ 
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ 
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+ 
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+ 
+del {
+    text-decoration: line-through;
+}
+ 
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+ 
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+ 
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+ 
+input, select {
+    vertical-align:middle;
+}
+
+
 /* 
 ------------------------------------------------------------
   以下CSS設定
@@ -86,58 +191,12 @@ footer {
 -------------------------
 */
 /*ベース*/
-
-.picture img {
-    width: 32vw;
-    height: 32vw;
-    object-fit: cover;
-    font-family: 'object-fit: cover;';
-  }
-
-.code li {
-    width: 70%;
-    margin: 1.5em auto;
-    position: relative;
-    background: #F8F0D7;
-    box-shadow:0 0 5px rgba(0,0,0,.2);
-    padding: 2em;
+section.tab_content{
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.code img {
-    width: 100%;
-    object-fit: contain;
-    font-family: 'object-fit: contain;';
-    border-radius: 1em;
-}
-.code h1 {
-    padding: 1em;
-    font-size: 200%;
-}
-
-.content {
-    margin: 0 auto;
-    width: 96vw;
-	height: auto;
-	transition: .5s opacity;
-	opacity: 1;
-    text-align: center;
-}
-.code_comment {
-    margin: 1em 0;
-    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
-    background-size: 100% 2.5em; 
-    line-height: 2.5em;
-    padding-bottom: 1px;
-}
-
-
-.tab-group{
-    display: flex;
-    justify-content: center;
-    background-color: #f3f3f3;
-  }
-  .tab{
-    flex-grow: 1;
+section.tab_content .tabLabel {	/* タブ */
 	text-align: center;
 	padding: 3px 12px;
 	flex: 1;
@@ -146,41 +205,92 @@ footer {
 	transition: .5s ;
 	cursor: pointer;
     border-bottom: solid 2px transparent;
-    
-  }
-  .panel-group{
-    border-top:none;
-    text-align: center;
-    background-color: #f3f3f3;
-    flex: 1;
-  }
-  .panel{
-    display:none;
-  }
-  .tab.is-active{
+}
+section.tab_content .tabLabel:nth-last-of-type(1){ margin-right: 0; }
+section.tab_content input {		/* ラジオボタン非表示 */
+	display: none;
+}
+section.tab_content .content {	/* 本文 */
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+	opacity: 0;
+}
+/*アクティブ設定*/
+section.tab_content input:checked + .tabLabel {
     border-bottom: solid 2px #ff3f89;
     transition: all 0.4s ease-out;
-  }
-  .panel.is-show{
-    display:block;
-  }
-
-.tab-group.fixed {
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 9999;
+}
+section.tab_content input:checked + .tabLabel + .content {
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 96vw;
+	height: auto;
+	transition: .5s opacity;
+	opacity: 1;
+    text-align: center;
 }
 
+section h1{
+    padding: 1em;
+    font-size: 200%;
+}
+
+section h2 {
+    font-size: 130%;
+    position: absolute;
+    top: -1em;
+    background-color: rgba(255,255,255,.4);
+    border-left:2px dotted rgba(0,0,0,.1);
+    border-right:2px dotted rgba(0,0,0,.1);
+    box-shadow:0 0 5px rgba(0,0,0,0.2);
+    padding: 0.5em 3em;
+    transform: rotate(-3deg);
+    font-family: 'Yusei Magic', sans-serif;
+}
+  
+.picture img {
+    width: 32vw;
+    height: 32vw;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+  }
+
+.code li {
+    margin: 1.5em auto;
+    width: 30vw;
+    position: relative;
+    background: #F8F0D7;
+    border-left:4px dotted rgba(0,0,0,.1);
+    border-right:4px dotted rgba(0,0,0,.1);
+    box-shadow:0 0 5px rgba(0,0,0,.2);
+    padding: 1em;
+}
+
+.code img {
+    width: 100%;
+    object-fit: contain;
+    font-family: 'object-fit: contain;';
+    border-radius: 1em;
+}
+
+.code_comment {
+    margin: 1em 0;
+    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
+    background-size: 100% 2.5em; 
+    line-height: 2.5em;
+    padding-bottom: 1px;
+}
 /* 
 -------------------------
   コンテンツ
 -------------------------
 */
 .contain{
+    flex: 1;
     padding: 2rem 0;
     background-color: #f3f3f3;
-    filter: drop-shadow(0px -5px 3px rgba(120, 120, 120, 0.5));
+    filter: drop-shadow(0px -5px 5px rgba(120, 120, 120, 0.5));
     }
 
 .profile{
@@ -188,14 +298,9 @@ footer {
     padding: 2rem 0;
     width: 70%;
     }
-
-.profile_box {
+.profile img{
     margin-top: -170px;
-    display: flex;
-    align-items: center;
-}
-.profile_box img{
-    vertical-align: top;
+    bottom:0;
     margin-left: 2em;
     width: 280px;
     height: 280px;
@@ -203,30 +308,6 @@ footer {
     border: 10px solid #ff3f89;
     transition: .5s;
     }
-.random {
-    box-shadow:0 0 5px rgba(0,0,0,0.2);
-    font-size: 90%;
-    position: relative;
-    display: block;
-    margin-left: 2em;
-    padding: 1em;
-    background-color: #ffe082;
-    border-radius: 1em;
-}
-.random::after {
-	right: 100%;
-	top: 50%;
-	border: solid transparent;
-	content: "";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-right-color: #ffe082;
-	border-width: 15px;
-	margin-top: -15px;
-}
-
 
 .profile dl {
     padding: 0.5em;
@@ -264,12 +345,7 @@ footer {
     height: 140px;
     border: 5px solid #ff3f89;
    }
-   .profile_box {
-    margin-top: -120px;
-    display: flex;
-    align-items: center;
-    }
-   .content {
+   section.tab_content input:checked + .tabLabel + .content {
     width: 90vw;
     }
     .code li {
