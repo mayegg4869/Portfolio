@@ -9,7 +9,9 @@ var images = [
     'img/daikichi.jpg',
     'img/chuukichi.jpg',
     'img/shoukichi.jpg',
-    'img/suekichi.jpg'
+    'img/suekichi.jpg',
+    'img/kyou.jpg',
+    'img/daikyou.jpg'
 ];
 
 // 日時取得
@@ -78,8 +80,6 @@ if (nowday == storageLastday) {
 // -----------------------------------------
 // おみくじを引くボタンがクリックされたとき
 function buttonClick(){
-    // おみくじシェイクエリアを作成
-    document.querySelector('#wrap').insertAdjacentHTML('beforeend', '<div id="omikuji_shake"></div>');
 
     // おみくじ箱の画像を準備
     const omikuji_shake = document.querySelector('#omikuji_shake');
@@ -105,52 +105,61 @@ function Result() {
     // おみくじシェイクエリアを消す
     document.getElementById('omikuji_shake').classList.remove('view');
 
-        // 運勢の配列を定義
-        let omikuji_result = ["daikichi", "chuukichi", "shoukichi", "suekichi"];
-        // 運勢を決定
-        let random = omikuji_result[Math.floor(Math.random() * omikuji_result.length)];
-    
-        // 運勢に応じた画像を表示
-        document.querySelector('#omikuji').innerHTML = '<img src="img/' + random + '.jpg" class="result">';
-        // テキストに変換
-        let unsei='';
-        switch(random) {
-            case 'daikichi':
-                unsei = "大吉";
-                break;
-            case 'chuukichi':
-                unsei = "中吉";
-                break;
-            case 'shoukichi':
-                unsei = "小吉";
-                break;
-            case 'suekichi':
-                unsei = "末吉";
-                break;
-            default:
-                unsei = "Error";
-                console.log('Error');
-        }
-        // セリフ変更
-        document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + unsei + 'じゃ！');
+    // 運勢の配列を定義
+    let omikuji_result = ["daikichi", "chuukichi", "shoukichi", "suekichi", "kyou", "daikyou"];
+    // 運勢を決定
+    let random = omikuji_result[Math.floor(Math.random() * omikuji_result.length)];
 
-        // ローカルストレージに、最後に占った日付と運勢を保存
-        var lastDay = date.getDate();
-        var lastUnsei = random;
-        var lastUnseiText = unsei;
-        localStorage.setItem('lastDay', lastDay );
-        localStorage.setItem('lastUnsei', lastUnsei );
-        localStorage.setItem('lastUnseiText', lastUnseiText );
+    // 運勢に応じた画像を表示
+    document.querySelector('#omikuji').innerHTML = '<img src="img/' + random + '.jpg" class="result">';
 
+    // ひとことコメント
+    let commentList = [
+        "はぶあないすでい　じゃ！",
+        "いつもと変わらぬ日々こそ大切じゃ！",
+        "しょせん乱数だから気にしないことじゃ！"
+    ];
+
+    // テキストに変換
+    let unsei='';
+    switch(random) {
+        case 'daikichi':
+            unsei = "大吉";
+            comment = commentList[0];
+            break;
+        case 'chuukichi':
+            unsei = "中吉";
+            comment = commentList[1];
+            break;
+        case 'shoukichi':
+            unsei = "小吉";
+            comment = commentList[1];
+            break;
+        case 'suekichi':
+            unsei = "末吉";
+            comment = commentList[1];
+            break;
+        case 'kyou':
+            unsei = "凶";
+            comment = commentList[2];
+            break;
+        case 'daikyou':
+            unsei = "大凶";
+            comment = commentList[2];
+            break;
+        default:
+            unsei = "Error";
+            console.log('Error');
+    }
+    // セリフ変更
+    document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + unsei + 'じゃ！<br>' + comment);
+
+    // ローカルストレージに、最後に占った日付と運勢を保存
+    var lastDay = date.getDate();
+    var lastUnsei = random;
+    var lastUnseiText = unsei;
+    localStorage.setItem('lastDay', lastDay );
+    localStorage.setItem('lastUnsei', lastUnsei );
+    localStorage.setItem('lastUnseiText', lastUnseiText );
 }
-
-
-
-
-
-
-
-
-
-
-
+// おわり
