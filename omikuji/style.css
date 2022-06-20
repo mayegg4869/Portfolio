@@ -361,6 +361,10 @@ a {
         margin-left: 0;
     }
 
+    #mute {
+        z-index: 9997;
+    }
+
     .btn {
     width: 100%;
     padding: 2em 1em;
