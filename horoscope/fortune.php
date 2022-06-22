@@ -4,7 +4,6 @@
 //https://qiita.com/fantm21/items/603cbabf2e78cb08133e
 
 $today = date("Y/m/d",strtotime("+12 hour"));
-$tommorow = date("Y/m/d",strtotime("+36 hour"));
 
 $url = "http://api.jugemkey.jp/api/horoscope/free/";
 $json = file_get_contents($url.$today);
@@ -22,8 +21,7 @@ for ($i = 0; $i < 12; $i++) {
     $h_love[$i] = $arr["horoscope"][$today][$i]["love"];//恋愛運
     $h_rank[$i] = $arr["horoscope"][$today][$i]["rank"];//ランキング
 
-
-    //各星座にマークを割り当てる
+    //各星座にマークと日付を割り当てる
     switch ($h_sign[$i]) {
         case "牡羊座":
             $mark[$i] = "alies";
@@ -77,20 +75,4 @@ for ($i = 0; $i < 12; $i++) {
             $mark[$i] = "Error";
     }
 }
-$rand = mt_rand(0, 11);
-/*
-$rand = mt_rand(0, 11);
-switch ($h_rank[$rand]) {
-    case 1:
-        $fortune = "おめでとう！　$h_sign[$rand]のあなたは運勢$h_rank[$rand]位！<br>$h_content[$rand]<br>ラッキーアイテムは$h_item[$rand]！";
-        break;
-    case 12:
-        $fortune = "ごめんなさいゴリ～。$h_sign[$rand]のあなたは運勢$h_rank[$rand]位！<br>$h_content[$rand]<br>ラッキーアイテムは$h_item[$rand]！";
-        break;
-    default:
-        $fortune = "今日の運勢$h_rank[$rand]位は$h_sign[$rand]！<br>$h_content[$rand]<br>ラッキーアイテムは$h_item[$rand]！";
-        break;
-}
-*/
-
 ?>

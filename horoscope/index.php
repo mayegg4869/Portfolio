@@ -37,59 +37,55 @@ include("fortune.php");
 
     <div  class="contents">
         <?php
-        for ($i = 0; $i < 12; $i++) {
-            echo "<div class='horoscope'>";
-            echo "<h1>$h_sign[$i]</h1>";
-            echo "<h2>$h_birthday[$i]</h2>";
-                echo "<div class='images'>";
-                    switch ($h_rank[$i]) {
-                        case 1:
-                            echo "<img src='img/no1.png' class='ranking'>";
-                            break;
-                        case 2:
-                            echo "<img src='img/no2.png' class='ranking'>";
-                            break;
-                        case 3:
-                            echo "<img src='img/no3.png' class='ranking'>";
-                            break;
-                        default:
-                        // 何もしない
-                        ;
+            for ($i = 0; $i < 12; $i++) {
+                echo "<div class='horoscope'>";
+                echo "<h1>$h_sign[$i]</h1>";
+                echo "<h2>$h_birthday[$i]</h2>";
+                    echo "<div class='images'>";
+                        switch ($h_rank[$i]) {
+                            case 1:
+                                echo "<img src='img/no1.png' class='ranking'>";
+                                break;
+                            case 2:
+                                echo "<img src='img/no2.png' class='ranking'>";
+                                break;
+                            case 3:
+                                echo "<img src='img/no3.png' class='ranking'>";
+                                break;
+                            default:
+                            // 何もしない
+                            ;
+                        }
+                        echo "<img src='img/$h_$mark[$i].png'>";
+                    echo "</div>"; // images
+
+                    echo "<p class='h_content'>$h_content[$i]</p>";
+                    echo "<div class='rating'>";
+                    echo "<p>ラッキーアイテム　<p class='nostyle'>$h_item[$i]</p></p>";
+                    echo "<p>ラッキーカラー　<p class='nostyle'>$h_color[$i]</p></p>";
+
+                    echo "<p>総合運　";
+                    for ($n = 0; $n < $h_total[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
                     }
-                    echo "<img src='img/$h_$mark[$i].png'>";
-                echo "</div>"; // images
+                    echo "</p>金運　";
+                    for ($n = 0; $n < $h_money[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "</p>仕事運　";
+                    for ($n = 0; $n < $h_job[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "</p>恋愛運　";
+                    for ($n = 0; $n < $h_job[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "</p>";
+                    echo "</div>";
 
-                echo "<p class='h_content'>$h_content[$i]</p>";
-                echo "<div class='rating'>";
-                echo "<p>ラッキーアイテム　<p class='nostyle'>$h_item[$i]</p></p>";
-                echo "<p>ラッキーカラー　<p class='nostyle'>$h_color[$i]</p></p>";
-
-                echo "<p>総合運　";
-                for ($n = 0; $n < $h_total[$i]; $n++) {
-                    echo "<img src='img/star.png' class='star'>";
-                }
-                echo "</p>金運　";
-                for ($n = 0; $n < $h_money[$i]; $n++) {
-                    echo "<img src='img/star.png' class='star'>";
-                }
-                echo "</p>仕事運　";
-                for ($n = 0; $n < $h_job[$i]; $n++) {
-                    echo "<img src='img/star.png' class='star'>";
-                }
-                echo "</p>恋愛運　";
-                for ($n = 0; $n < $h_job[$i]; $n++) {
-                    echo "<img src='img/star.png' class='star'>";
-                }
-                echo "</p>";
-                echo "</div>";
-
-            echo "</div>"; // horoscope
-        }
-
-
-
+                echo "</div>"; // horoscope
+            }
         ?>
-
     <!-- contents --></div>
     <!-- フッターエリア -->
     <footer>
