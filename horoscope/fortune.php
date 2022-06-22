@@ -4,6 +4,7 @@
 //https://qiita.com/fantm21/items/603cbabf2e78cb08133e
 
 $today = date("Y/m/d",strtotime("+12 hour"));
+$tommorow = date("Y/m/d",strtotime("+36 hour"));
 
 $url = "http://api.jugemkey.jp/api/horoscope/free/";
 $json = file_get_contents($url.$today);
@@ -21,7 +22,7 @@ for ($i = 0; $i < 12; $i++) {
     $h_love[$i] = $arr["horoscope"][$today][$i]["love"];//恋愛運
     $h_rank[$i] = $arr["horoscope"][$today][$i]["rank"];//ランキング
 
-    //各星座にマークと日付を割り当てる
+    //各星座にマークを割り当てる
     switch ($h_sign[$i]) {
         case "牡羊座":
             $mark[$i] = "alies";
