@@ -3,8 +3,7 @@
 //https://www.nob.gr.jp/au/wordpress/1554/
 //https://qiita.com/fantm21/items/603cbabf2e78cb08133e
 
-$today = date("Y/m/d",strtotime("+12 hour"));
-$tommorow = date("Y/m/d",strtotime("+36 hour"));
+$today = date("Y/m/d");
 
 $url = "http://api.jugemkey.jp/api/horoscope/free/";
 $json = file_get_contents($url.$today);
