@@ -59,7 +59,7 @@ include("fortune.php");
                             // 何もしない
                             ;
                         }
-                        echo "<img src='img/$h_$mark[$i].png'>";
+                        echo "<img src='img/$mark[$i].png'>";
                     echo "</div>"; // images
 
                     // コンテンツ本文
