@@ -96,7 +96,7 @@ include("fortune.php");
     <!-- フッターエリア -->
     <footer>
         <p>by <a href="https://mayegg4869.github.io/Portfolio/">mayegg</a></p>
-        <p><a href="https://www.ac-illust.com/">Illust AC</a> / <a href="https://www.photo-ac.com/">Photo AC</a></p>
+        <p>Illust by <a href="https://www.ac-illust.com/">Illust AC</a></p>
         <p>powerd by <a href="http://jugemkey.jp/api/">JugemKey</a>　【PR】<a href="http://www.tarim.co.jp/">原宿占い館 塔里木</a></p>
     <!-- footer --></footer>
 <!-- wrapper --></div>
