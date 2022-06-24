@@ -13,10 +13,6 @@
     @import url('https://fonts.googleapis.com/css2?family=Kaisei+Decol&family=Zen+Kaku+Gothic+New&display=swap');
     </style>
     <!-- ウェブフォントココマデ -->
-<?php 
-// 占い部分を読み込み
-require("fortune.php");
-?>
 </head>
 
 <body>
@@ -36,8 +32,12 @@ require("fortune.php");
     <h3>ゆるーいイラストで今日の運勢をお届けします。</h3>
 
     <?php
+    // 占い部分を読み込み
+    require_once("fortune.php");
+
+    // html出力
         echo "<h3>$today</h3>";
-        echo "<div  class='contents'>";
+        echo "<div class='contents'>";
             // 12星座ごとに繰り返す
             for ($i = 0; $i < 12; $i++) {
                 // コンテンツ表示エリア
@@ -59,7 +59,7 @@ require("fortune.php");
                                 echo "<img src='img/no3.png' class='ranking'>";
                                 break;
                             default:
-                            // 何もしない
+                            // 3位以降は何もしない
                             ;
                         }
                         // 星座のイラストを表示
@@ -69,6 +69,7 @@ require("fortune.php");
                     // コンテンツ本文
                     echo "<p class='h_content'>$h_content[$i]</p>";
                     
+                    // 総合運やラッキーカラーなど
                     echo "<ul>";
                     //運勢の5段階評価
                     echo "<dt>総合運</dt><dd>";
@@ -76,14 +77,17 @@ require("fortune.php");
                     for ($n = 0; $n < $h_total[$i]; $n++) {
                         echo "<img src='img/star.png' class='star'>";
                     }
+                    //echo "</dd>";
                     echo "<dt>金運</dt><dd>";
                     for ($n = 0; $n < $h_money[$i]; $n++) {
                         echo "<img src='img/star.png' class='star'>";
                     }
+                    //echo "</dd>";
                     echo "<dt>仕事運</dt><dd>";
                     for ($n = 0; $n < $h_job[$i]; $n++) {
                         echo "<img src='img/star.png' class='star'>";
                     }
+                    //echo "</dd>";
                     echo "<dt>恋愛運</dt><dd>";
                     for ($n = 0; $n < $h_job[$i]; $n++) {
                         echo "<img src='img/star.png' class='star'>";
@@ -97,7 +101,7 @@ require("fortune.php");
 
                 echo "</div>"; // horoscope
             }
-        echo "<!-- contents --></div>";
+        echo "</div>" // contents
     ?>
     <!-- フッターエリア -->
     <footer>

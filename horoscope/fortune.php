@@ -1,9 +1,7 @@
 <?php
-// 使用API
-// https://jugemkey.jp/api/waf/api_free.php
-// 参考ドキュメント
-// https://www.nob.gr.jp/au/wordpress/1554/
-// https://qiita.com/fantm21/items/603cbabf2e78cb08133e
+//参考ドキュメント
+//https://www.nob.gr.jp/au/wordpress/1554/
+//https://qiita.com/fantm21/items/603cbabf2e78cb08133e
 
 $today = date("Y/m/d");
 
