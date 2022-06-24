@@ -14,9 +14,9 @@
     </style>
     <!-- ウェブフォントココマデ -->
 <?php 
-include("fortune.php");
+// 占い部分を読み込み
+require("fortune.php");
 ?>
-
 </head>
 
 <body>
@@ -35,15 +35,18 @@ include("fortune.php");
     <h2>yuru Horoscope</h2>
     <h3>ゆるーいイラストで今日の運勢をお届けします。</h3>
 
-    <?php 
+    <?php
         echo "<h3>$today</h3>";
-    ?>
-    <div  class="contents">
-        <?php
+        echo "<div  class='contents'>";
+            // 12星座ごとに繰り返す
             for ($i = 0; $i < 12; $i++) {
+                // コンテンツ表示エリア
                 echo "<div class='horoscope'>";
+                // 星座名
                 echo "<h1>$h_sign[$i]</h1>";
+                // 誕生日
                 echo "<h2>$h_birthday[$i]</h2>";
+                    // 1位～3位にはマークを表示
                     echo "<div class='images'>";
                         switch ($h_rank[$i]) {
                             case 1:
@@ -59,40 +62,43 @@ include("fortune.php");
                             // 何もしない
                             ;
                         }
-                        echo "<img src='img/$mark[$i].png'>";
+                        // 星座のイラストを表示
+                        echo "<img src='img/$h_mark[$i].png'>";
                     echo "</div>"; // images
 
                     // コンテンツ本文
                     echo "<p class='h_content'>$h_content[$i]</p>";
                     
-                    // ラッキーカラー・アイテム
                     echo "<ul>";
-                    echo "<dt>ラッキーアイテム</dt><dd>$h_item[$i]</dd>";
-                    echo "<dt>ラッキーカラー</dt><dd>$h_color[$i]</dd>";
-
                     //運勢の5段階評価
                     echo "<dt>総合運</dt><dd>";
-                        // 数値の数だけ★を繰り返し出す
-                        for ($n = 0; $n < $h_total[$i]; $n++) {
-                            echo "<img src='img/star.png' class='star'>";
-                        }
-                        echo "<dt>金運</dt><dd>";
-                        for ($n = 0; $n < $h_money[$i]; $n++) {
-                            echo "<img src='img/star.png' class='star'>";
-                        }
-                        echo "<dt>仕事運</dt><dd>";
-                        for ($n = 0; $n < $h_job[$i]; $n++) {
-                            echo "<img src='img/star.png' class='star'>";
-                        }
-                        echo "<dt>恋愛運</dt><dd>";
-                        for ($n = 0; $n < $h_job[$i]; $n++) {
-                            echo "<img src='img/star.png' class='star'>";
-                        }
-                    echo "</dd></ul>";
+                    // 数値の数だけ★を繰り返し出す
+                    for ($n = 0; $n < $h_total[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "<dt>金運</dt><dd>";
+                    for ($n = 0; $n < $h_money[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "<dt>仕事運</dt><dd>";
+                    for ($n = 0; $n < $h_job[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "<dt>恋愛運</dt><dd>";
+                    for ($n = 0; $n < $h_job[$i]; $n++) {
+                        echo "<img src='img/star.png' class='star'>";
+                    }
+                    echo "</dd>";
+
+                    // ラッキーカラー・アイテム
+                    echo "<dt>ラッキーアイテム</dt><dd>$h_item[$i]</dd>";
+                    echo "<dt>ラッキーカラー</dt><dd>$h_color[$i]</dd>";
+                    echo "</ul>";
+
                 echo "</div>"; // horoscope
             }
-        ?>
-    <!-- contents --></div>
+        echo "<!-- contents --></div>";
+    ?>
     <!-- フッターエリア -->
     <footer>
         <p>by <a href="https://mayegg4869.github.io/Portfolio/">mayegg</a></p>
