@@ -3,7 +3,7 @@
 // -----------------------------------------
 
 // 画像のpreload
-var images = [
+const images = [
     'img/chara.png',
     'img/omikuji.png',
     'img/daikichi.jpg',
@@ -15,30 +15,30 @@ var images = [
 ];
 
 // 日時取得
-let date = new Date();
-let nowday = date.getDate();
-let nowtime = date.getHours();
+const date = new Date();
+const nowday = date.getDate();
+const nowhour = date.getHours();
 
 // 現在の時刻に応じて背景を変える
-let background = document.body;
-if ( nowtime > 18 || 6 > nowtime) { // 19時以降もしくは6時以前
-    background.style.setProperty('background-image', 'url("img/jinja_03.jpg")', 'important');
-} else if( nowtime > 15 && nowtime <= 18) { // 16時～19時まで
-    background.style.setProperty('background-image', 'url("img/jinja_02.jpg")', 'important');
+const body = document.body;
+if ( nowhour > 18 || 6 > nowhour) { // 19時以降もしくは6時以前
+    body.style.setProperty('background-image', 'url("img/jinja_03.jpg")', 'important');
+} else if( nowhour > 15 && nowhour <= 18) { // 16時～19時まで
+    body.style.setProperty('background-image', 'url("img/jinja_02.jpg")', 'important');
 } else {
-    background.style.setProperty('background-image', 'url("img/jinja_01.jpg")', 'important');
+    body.style.setProperty('background-image', 'url("img/jinja_01.jpg")', 'important');
 }
 
 // BGMとSEの読み込み
-let music = new Audio('music/music.mp3');
-let sound = new Audio('music/sound.mp3');
+const music = new Audio('music/music.mp3');
+const sound = new Audio('music/sound.mp3');
 // BGM再生
 music.loop = true;
 music.muted = true;
 
 // ボタンで切り替えできるようにする
 function musicPlay(){
-    if(music.muted == true){
+    if(music.muted){
         music.play();
         music.muted = false;
         mute.innerHTML = '<span class="material-symbols-rounded">volume_up</span>';
@@ -52,9 +52,10 @@ function musicPlay(){
 
 //すべて読み込んだときの処理
 window.onload = function(){
+    let i;
     // 画像プリロード
     for (i = 0; i < images.length; i++){
-        var img = document.createElement('img');
+        const img = document.createElement('img');
         img.src = images[i];
     }
     // ローディング終了
@@ -64,12 +65,12 @@ window.onload = function(){
 // -----------------------------------------
 // その日すでに占っていたら
 // -----------------------------------------
-var storageLastday = localStorage.getItem('lastDay');
+const storageLastday = localStorage.getItem('lastDay');
 if (nowday == storageLastday) {
-    var storageLastUnsei = localStorage.getItem('lastUnsei');
-    var storageLastUnseiText = localStorage.getItem('lastUnseiText');
-    document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + storageLastUnseiText + 'じゃ！<br>また明日来て欲しいのじゃ！');
-    document.querySelector('#omikuji').innerHTML = '<img src="img/' + storageLastUnsei + '.jpg" class="result">';
+    const storageLastFortune = localStorage.getItem('lastFortune');
+    const storageLastFortuneText = localStorage.getItem('lastFortuneText');
+    document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + storageLastFortuneText + 'じゃ！<br>また明日来て欲しいのじゃ！');
+    document.querySelector('#omikuji').innerHTML = '<img src="img/' + storageLastFortune + '.jpg" class="result">';
 } else {
     // 日付が変わっていたらlocalstorageをクリア
     localStorage.clear()
@@ -106,7 +107,7 @@ function Result() {
     document.getElementById('omikuji_shake').classList.remove('view');
 
     // 運勢の配列を定義
-    let omikuji_result = ["daikichi", "chuukichi", "shoukichi", "suekichi", "kyou", "daikyou"];
+    const omikuji_result = ["daikichi", "chuukichi", "shoukichi", "suekichi", "kyou", "daikyou"];
     // 運勢を決定
     let random = omikuji_result[Math.floor(Math.random() * omikuji_result.length)];
 
@@ -114,52 +115,52 @@ function Result() {
     document.querySelector('#omikuji').innerHTML = '<img src="img/' + random + '.jpg" class="result">';
 
     // ひとことコメント
-    let commentList = [
+    const commentList = [
         "はぶあないすでい　じゃ！",
         "いつもと変わらぬ日々こそ大切じゃ！",
         "しょせん乱数だから気にしないことじゃ！"
     ];
 
     // テキストに変換
-    let unsei='';
+    let fortune='';
     switch(random) {
         case 'daikichi':
-            unsei = "大吉";
+            fortune = "大吉";
             comment = commentList[0];
             break;
         case 'chuukichi':
-            unsei = "中吉";
+            fortune = "中吉";
             comment = commentList[1];
             break;
         case 'shoukichi':
-            unsei = "小吉";
+            fortune = "小吉";
             comment = commentList[1];
             break;
         case 'suekichi':
-            unsei = "末吉";
+            fortune = "末吉";
             comment = commentList[1];
             break;
         case 'kyou':
-            unsei = "凶";
+            fortune = "凶";
             comment = commentList[2];
             break;
         case 'daikyou':
-            unsei = "大凶";
+            fortune = "大凶";
             comment = commentList[2];
             break;
         default:
-            unsei = "Error";
+            fortune = "Error";
             console.log('Error');
     }
     // セリフ変更
-    document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + unsei + 'じゃ！<br>' + comment);
+    document.querySelector('.comment').innerHTML = ('今日のお主の運勢は' + fortune + 'じゃ！<br>' + comment);
 
     // ローカルストレージに、最後に占った日付と運勢を保存
-    var lastDay = date.getDate();
-    var lastUnsei = random;
-    var lastUnseiText = unsei;
+    const lastDay = nowday;
+    const lastFortune = random;
+    const lastFortuneText = fortune;
     localStorage.setItem('lastDay', lastDay );
-    localStorage.setItem('lastUnsei', lastUnsei );
-    localStorage.setItem('lastUnseiText', lastUnseiText );
+    localStorage.setItem('lastFortune', lastFortune );
+    localStorage.setItem('lastFortuneText', lastFortuneText );
 }
 // おわり
