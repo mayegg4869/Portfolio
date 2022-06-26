@@ -5,38 +5,38 @@
 */
 
 html {
-    overflow-x: hidden;
-    font-family: 'M PLUS 1p', sans-serif;
+ 	overflow-x: hidden;
+ 	font-family: 'M PLUS 1p', sans-serif;
 }
 body {
-    display: flex;
-    flex-flow: column;
-    min-height: 100vh;
-    width: 100%;
-    color:rgb(46, 46, 46);
-    }
+ 	display: flex;
+ 	flex-flow: column;
+ 	min-height: 100vh;
+ 	width: 100%;
+ 	color:rgb(46, 46, 46);
+ 	}
 ul {
-    list-style: none;
-    display: flex;
-    flex-wrap:wrap;
-    padding-left: 0;
+ 	list-style: none;
+ 	display: flex;
+ 	flex-wrap:wrap;
+ 	padding-left: 0;
 }
 header{
-    min-height: 180px;
-    height: 30vh;
-    background-attachment: fixed;
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url("img/twitter-yellow37.jpg");
-    text-align: center;
-    }
+ 	min-height: 180px;
+ 	height: 30vh;
+ 	background-attachment: fixed;
+ 	background-position: top center;
+ 	background-size: contain;
+ 	background-repeat: no-repeat;
+ 	background-image: url("img/twitter-yellow37.jpg");
+ 	text-align: center;
+ 	}
 footer {
-    text-align: center;
-    padding: 0.5em;
-    background-color: #ff3f89;
-    color: #f3f3f3;
-    }
+ 	text-align: center;
+ 	padding: 0.5em;
+ 	background-color: #ff3f89;
+ 	color: #f3f3f3;
+ 	}
 
 
 /* 
@@ -45,40 +45,40 @@ footer {
 -------------------------
 */
 #loading {
-    width: 100vw;
-    height: 100vh;
-    transition: all 0.5s;
-    background-color: #ff3f89;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
-  .spinner {
-    background-image: url("img/loading.png");
-    width: 128px;
-    height: 128px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    animation:gorilla 1s infinite;
-  }
-  /* ローディングアニメーション */
-  @keyframes gorilla {
-    0% {
-        transform:rotate(0deg);
-    }
-    100% {
-        transform:rotate(360deg);
-    }
-  }
-  .loaded {
-    opacity: 0;
-    visibility: hidden;
-  }
+ 	width: 100vw;
+ 	height: 100vh;
+ 	transition: all 0.5s;
+ 	background-color: #ff3f89;
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 9999;
+}
+.spinner {
+ 	background-image: url("img/loading.png");
+ 	width: 128px;
+ 	height: 128px;
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ 	margin: auto;
+ 	animation:gorilla 1s infinite;
+}
+/* ローディングアニメーション */
+@keyframes gorilla {
+ 	0% {
+ 	  transform:rotate(0deg);
+ 	}
+ 	100% {
+ 	  transform:rotate(360deg);
+ 	}
+}
+.loaded {
+ 	opacity: 0;
+ 	visibility: hidden;
+}
 
 /* 
 -------------------------
@@ -87,131 +87,98 @@ footer {
 */
 /*ベース*/
 
-.picture img {
-    width: 32vw;
-    height: 32vw;
-    object-fit: cover;
-    font-family: 'object-fit: cover;';
-  }
-
-.code li {
-    width: 70%;
-    margin: 1.5em auto;
-    position: relative;
-    background: #F8F0D7;
-    box-shadow:0 0 5px rgba(0,0,0,.2);
-    padding: 2em;
-}
-
-.code img {
-    width: 100%;
-    object-fit: contain;
-    font-family: 'object-fit: contain;';
-    border-radius: 1em;
-}
-.code h1 {
-    padding: 1em;
-    font-size: 200%;
-}
-
-.content {
-    margin: 0 auto;
-    width: 96vw;
-	height: auto;
-	transition: .5s opacity;
-	opacity: 1;
-    text-align: center;
-}
-.code_comment {
-    margin: 1em 0;
-    background-image: linear-gradient(180deg, #ccc 1px, transparent 1px);
-    background-size: 100% 2.5em; 
-    line-height: 2.5em;
-    padding-bottom: 1px;
-}
-
-
 .tab-group{
-    display: flex;
-    justify-content: center;
-    background-color: #f3f3f3;
+ 	display: flex;
+ 	justify-content: center;
+ 	background-color: #f3f3f3;
+ 	filter: drop-shadow(0px 3px 2px rgba(120, 120, 120, 0.3));
   }
   .tab{
-    flex-grow: 1;
-	text-align: center;
-	padding: 3px 12px;
-	flex: 1;
-	order: -1;
-	color:rgb(46, 46, 46);
-	transition: .5s ;
-	cursor: pointer;
-    border-bottom: solid 2px transparent;
-    
+ 	flex-grow: 1;
+ 	text-align: center;
+ 	padding: 3px 12px;
+ 	flex: 1;
+ 	order: -1;
+ 	color:rgb(46, 46, 46);
+ 	transition: .5s ;
+ 	cursor: pointer;
+ 	border-bottom: solid 2px transparent;
+ 	
   }
   .panel-group{
-    border-top:none;
-    text-align: center;
-    background-color: #f3f3f3;
-    flex: 1;
+ 	border-top:none;
+ 	text-align: center;
+ 	background-color: #f3f3f3;
+ 	flex: 1;
   }
   .panel{
-    display:none;
+ 	display:none;
   }
   .tab.is-active{
-    border-bottom: solid 2px #ff3f89;
-    transition: all 0.4s ease-out;
+ 	border-bottom: solid 2px #ff3f89;
+ 	transition: all 0.4s ease-out;
   }
   .panel.is-show{
-    display:block;
+ 	display:block;
   }
 
-.tab-group.fixed {
-    position: sticky;
-    width: 100%;
-    top: 0;
-    z-index: 9998;
-}
+  .tab-group.fixed {
+ 	position: sticky;
+ 	width: 100%;
+ 	top: 0;
+ 	z-index: 9998;
+  }
 
 /* 
 -------------------------
   コンテンツ
 -------------------------
 */
+
+a {
+  color: #ff3f89;
+  line-height: 2em;
+}
+p {
+  line-height: 1.5em;
+}
+
+/* ヘッダー、プロフィール */
 .contain{
-    padding: 2rem 0;
-    background-color: #f3f3f3;
-    filter: drop-shadow(0px -5px 3px rgba(120, 120, 120, 0.5));
-    }
+ 	padding: 2rem 0;
+ 	background-color: #f3f3f3;
+ 	filter: drop-shadow(0px -5px 3px rgba(120, 120, 120, 0.5));
+ 	}
 
 .profile{
-    margin: 0 auto;
-    padding: 2rem 0;
-    width: 70%;
-    }
+ 	margin: 0 auto;
+ 	padding: 2rem 0;
+ 	width: 70%;
+ 	}
 
 .profile_box {
-    margin-top: -170px;
-    display: flex;
-    align-items: center;
+ 	margin-top: -170px;
+ 	display: flex;
+ 	align-items: center;
 }
 .profile_box img{
-    vertical-align: top;
-    margin-left: 2em;
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    border: 10px solid #ff3f89;
-    transition: .5s;
-    }
+ 	vertical-align: top;
+ 	margin-left: 2em;
+ 	width: 280px;
+ 	height: 280px;
+ 	border-radius: 50%;
+ 	border: 10px solid #ff3f89;
+ 	transition: .5s;
+ 	}
 .random {
-    box-shadow:0 0 5px rgba(0,0,0,0.2);
-    font-size: 90%;
-    position: relative;
-    display: block;
-    margin-left: 2em;
-    padding: 1em;
-    background-color: #ffe082;
-    border-radius: 1em;
+ 	box-shadow:0 0 5px rgba(0,0,0,0.2);
+ 	font-size: 90%;
+ 	position: relative;
+ 	display: block;
+ 	margin-left: 2em;
+ 	padding: 1em;
+ 	background-color: #ffffff;
+ 	border-radius: 1em;
 }
 .random::after {
 	right: 100%;
@@ -222,62 +189,179 @@ footer {
 	width: 0;
 	position: absolute;
 	pointer-events: none;
-	border-right-color: #ffe082;
+	border-right-color: #ffffff;
 	border-width: 15px;
 	margin-top: -15px;
 }
 
-
 .profile dl {
-    padding: 0.5em;
-    overflow: hidden;
-    width: auto;
-  }
-  .profile dt {
-    padding: 0.3em;
-    font-weight: bolder;
-    color: #ff3f89;
-  }
-  .profile dd{
-    padding-left: 2em;
-  }
-  .caption{
-    padding: 1.5em;
+ 	padding: 0.5em;
+ 	overflow: hidden;
+ 	width: auto;
+}
+.profile dt {
+ 	padding: 0.3em;
+ 	font-weight: bolder;
+ 	color: #ff3f89;
+}
+.profile dd{
+ 	padding-left: 2em;
+}
+.caption{
+ 	padding: 1.5em;
+}
+
+/* codeコンテンツ */
+.code {
+ width: 70%;
+ margin: 0 auto;
+ background-color: #ffffff;
+ border-right: solid 1px #bbbbbb;
+ border-left: solid 1px #bbbbbb;
+}
+
+.code ul {
+ border-bottom: solid 1px #bbbbbb;
+}
+.code li {
+  padding: 1em;
+  padding-left: 12em;
+  padding-right: 3em;
+  text-align: left;
+  width: 100%;
+  height: auto;
+  border-top: solid 1px #bbbbbb;
+  display: inline-block;
+}
+.code img {
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+  font-family: 'object-fit: contain;';
+  border: solid 1px #bbbbbb;
+  border-radius: 1em;
+}
+.code h1 {
+ margin: 1em auto;
+ width: 50%;
+ padding: 0.3em;
+ font-size: 200%;
+ border-radius: 10em;
+ background-color: #eff3f4;
+ background-image: url("img/search.png");
+ background-repeat: no-repeat;
+ background-size: 1em;
+ background-position: 1em;
+}
+.code h2 {
+  font-size: 120%;
+  font-weight: bolder;
+  padding: 0.5em 0;
+}
+
+.date {
+ color: #536471;
+}
+
+.profile_img {
+  margin-left: -11em;
+  width: 10em;
+  height: 10em;
+  background-image: url("img/profile.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* pictureコンテンツ */
+.picture {
+  margin: 0 auto;
+  width: 96vw;
+  height: auto;
+  transition: .5s opacity;
+  opacity: 1;
+  text-align: center;
+}
+.picture img {
+  width: 32vw;
+  height: 32vw;
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+
+/* 
+  キラキラエフェクト
+  https://web-dev.tech/front-end/javascript/glittering-effect-on-hover/
+*/
+/* キラキラ部分 */
+.star {
+  position: absolute;
+  display: block;
+  width: 10px; /* キラキラの横幅を指定 */
+  height: 10px; /* キラキラの縦幅を指定 */
+  background-image: url("img/star.svg"); /* キラキラの画像のパスを記入 */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: glitter 1s;
+  pointer-events: none;
+}
+
+/* キラキラが発生するアニメーション */
+@keyframes glitter {
+  0% {
+    transform: scale(0);
+    opacity: 0;
   }
 
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
 /* 
 ------------------------------------------------------------
   以下CSS設定(レスポンシブ)
 ------------------------------------------------------------
 */
 @media screen and (max-width: 1500px) { /*ウィンドウ幅が1500px以下の場合に適用*/
-    header{
-        background-size: 1500px 500px;
-        }
+ 	header{
+ 	background-size: 1500px 500px;
+ 	}
 }
 @media screen and (max-width: 1024px) { /*ウィンドウ幅が1000px以下の場合に適用*/
   .profile{
-       width: 90%;
+ 	width: 90%;
    }
    .profile img{
-    width: 140px;
-    height: 140px;
-    border: 5px solid #ff3f89;
+ 	width: 140px;
+ 	height: 140px;
+ 	border: 5px solid #ff3f89;
    }
    .profile_box {
-    margin-top: -120px;
-    display: flex;
-    align-items: center;
-    }
-   .content {
-    width: 90vw;
-    }
-    .code li {
-        width: 100vw;
-    }
-    .picture img {
-        width: 30vw;
-        height: 30vw;
-    }
+ 	margin-top: -120px;
+ 	display: flex;
+ 	align-items: center;
+ 	}
+   .picture {
+ 	width: 90vw;
+ 	}
+ 	.code li {
+ 	width: 100vw;
+ 	}
+ 	.picture img {
+ 	width: 30vw;
+ 	height: 30vw;
+ 	}
+ 	.code {
+ 	  width: 100%;
+ 	}
 }
 

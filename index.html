@@ -8,25 +8,18 @@
 <link rel="icon" href="favicon.ico">
 <link rel="stylesheet" href="reset.css">
 <link rel="stylesheet" href="style.css">
-
     <!-- ウェブフォント -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=M+PLUS+1p&family=Yusei+Magic&display=swap');
     </style>
-    <!-- ウェブフォントココマデ -->
-
-    <?php 
-            require("random.php");
-    ?>
 </head>
 
 <body>
 <!-- ローディング画面 -->
 <div id="loading"><div class="spinner"></div></div>
-<!-- ローディングココマデ -->
+
 <!-- ヘッダ画像 -->
 <header></header>
-<!-- ヘッダ画像ココマデ -->
 
 <!-- メイン -->
 <div class="contain">
@@ -35,27 +28,132 @@
         <div class="profile_box">
             <img src="img/profile.png">
                 <div class="random"></div>
-        </div>
+        <!-- profile_box --></div>
 
-        <dl><dt>Name</dt><dd>may.E</dd></dl>
-        <dl><dt>Skill</dt><dd>Code : HTML / CSS / Javascript / PHP</dd><dd>Design : Photoshop / Illustrator / Clip Studio Paint</dd></dl>
+        <dl><dt>Name</dt><dd>mayegg</dd></dl>
+        <dl><dt>Skill</dt><dd>Code : HTML / CSS / Javascript / php</dd><dd>Design : Photoshop / Illustrator / Clip Studio Paint</dd></dl>
         <p class="caption">ゴリラが好きです</p>
 
-    </div>
-    <!-- プロフィールココマデ -->
-    </div>
-
+    <!-- profile --></div>
+<!-- contain --></div>
 
 <!--タブ-->
 <ul class="tab-group">
-	<li class="tab is-active"><img src="img/tab_image.png"><p>Picture</p></li>
-	<li class="tab"><img src="img/tab_code.png"><p>Code</p></li>
+	<li class="tab is-active"><img src="img/tab_code.png"><p>Code</p></li>
+	<li class="tab"><img src="img/tab_image.png"><p>Picture</p></li>
 </ul>
 
 <!--タブを切り替えて表示するコンテンツ-->
 <div class="panel-group">
 	<div class="panel is-show">
-    <div class="content">
+        <div class="code">
+            <ul>
+                <h1>#WebSite</h1>
+                <li><div class="profile_img glitter"></div>
+                    <h2>ゆる12星座うらない</h2>
+                    <p>APIを利用した占いページです。</p>
+                    <p>1日1回、当日の占い結果を表示します。</p>
+                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/horoscope">GitHub</a>　/　<a href="http://mayegg.starfree.jp/horoscope/">Pages</a>              
+                    <img src="img/portfolio_03.png">
+                    <p class="date">22-06-26</p>
+                </li>
+
+                <li><div class="profile_img glitter"></div>
+                    <h2>きつねのおみくじ</h2>
+                    <p>JSを使用したおみくじWebアプリです。</p>
+                    <p>基本的な乱数やlocalStorageを使用した1日1回制限、</p>
+                    <p>BGMの使用など簡素ながら細かく盛り込みました。</p>
+                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/omikuji">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/omikuji/">Pages</a>              
+                    <img src="img/portfolio_02.png">
+                    <p class="date">22-06-20</p>
+                </li>
+
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>しらゆき園</h2>
+                    <p>架空の保育園を想定したWebサイトです。</p>
+                    <p>基本的な要素や可愛らしい配色にこだわりました。</p>
+                    <p><a href="https://github.com/mayegg4869/Portfolio/tree/master/website_01">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/website_01/">Pages</a></p>             
+                    <img src="img/portfolio_01.png">
+                    <p class="date">21-08-16</p>
+                </li>
+            </ul>
+
+            
+            <ul>
+                <h1>#Various</h1>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>フォトギャラリー</h2>
+                    <p>【2206講習会】</p>
+                    <p>様々なライブラリを利用したフォトギャラリーの例</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/220611">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220611/">Pages</a>              
+                    <p class="date">22-06-11</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>カウントダウンページ</h2>
+                    <p>【2204講習会/課題】</p>
+                    <p>Javascriptを用いたカウントダウンの表示、オープン後の出し分け表示など</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/220409">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220409">Pages</a>              
+                    <p class="date">22-04-09</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>jsonデータの取得</h2>
+                    <p>【2201講習会/課題】</p>
+                    <p>phpを用いた配列の練習・jsonデータの抽出</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/220115">GitHub</a>
+                    <p class="date">22-01-15</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>FizzBuzz（php版）</h2>
+                    <p>【2201講習会/課題】</p>
+                    <p>phpを用いたFizzBuzz問題</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/211211">GitHub</a>
+                    <p class="date">21-12-11</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>FizzBuzz（js版）</h2>
+                    <p>【2110講習会/課題】</p>
+                    <p>jsを用いたFizzBuzz問題</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/211009">GitHub</a>
+                    <p class="date">21-10-09</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>jsのDOM操作</h2>
+                    <p>【2107講習会/課題】</p>
+                    <p>A課題:jsでクイズつくる</p>
+                    <p>B課題:ライブラリを使用する</p>
+                    <p>C課題:要素を変更する</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/210710">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/210710/">Pages</a>
+                    <p class="date">21-07-10</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>jsのfor文・if文</h2>
+                    <p>【2106講習会/課題】</p>
+                    <p>for文で数字をカウントアップし、if文で指定の数字になったときの動作を出し分ける</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/210612">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/210612/">Pages</a>
+                    <p class="date">21-06-12</p>
+                </li>
+                <li>
+                    <div class="profile_img glitter"></div>
+                    <h2>変数の代入・配列の使い方</h2>
+                    <p>【2104講習会】</p>
+                    <p>jsの変数、型、配列についての講習メモ</p>
+                    <a href="https://github.com/mayegg4869/kadai/tree/master/210410">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/210410/">Pages</a>
+                    <p class="date">21-04-10</p>
+                </li>
+            </ul>
+        <!-- content code --></div>
+     <!-- panel is-show --></div>
+
+	<div class="panel">
+        <div class="content">
             <ul class="picture">
                 <li><a href="img/illust_06.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/06" ><img src="img/illust_06.jpg" width="100%"></a></li>
                 <li><a href="img/illust_05.jpg"  data-fancybox="gallery" data-caption="オブちゃんポスターイラスト　22/04"><img src="img/illust_05.jpg" width="100%"></a></li>
@@ -66,53 +164,9 @@
                 <li><a href="img/illust_SD01.png"  data-fancybox="gallery" data-caption="オブちゃんTシャツイラスト　宇宙オブちゃん"><img src="img/illust_SD01.png" width="100%"></a></li>
                 <li><a href="img/illust_SD02.png"  data-fancybox="gallery" data-caption="オブちゃんTスライド用イラスト"><img src="img/illust_SD02.png" width="100%"></a></li>
             </ul>
-        </div>
-    </div>
-
-	<div class="panel">
-    <div class="content code">
-            <h1>#WebSite</h1>
-            <ul>
-                <li><h2>しらゆき園</h2><br>
-                <img src="img/portfolio_01.png" width="100%"><br>
-                <div class="code_comment">
-                    <p>架空の保育園を想定したWebサイトです。</p>
-                    <p>基本的な要素や可愛らしい配色にこだわりました。</p>
-                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/website_01">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/website_01/">GitHub Pages</a>              
-                </div>
-                </li>
-
-                <li><h2>きつねのおみくじ</h2><br>
-                <img src="img/portfolio_02.png" width="100%"><br>
-                <div class="code_comment">
-                    <p>JSを使用したおみくじWebアプリです。</p>
-                    <p>基本的な乱数やlocalStorageを使用した1日1回制限、</p>
-                    <p>BGMの使用など簡素ながら細かく盛り込みました。</p>
-                    <a href="https://github.com/mayegg4869/Portfolio/tree/master/omikuji">GitHub</a>　/　<a href="https://mayegg4869.github.io/Portfolio/omikuji/">GitHub Pages</a>              
-                </div>
-                </li>
-            </ul>
-
-            <h1>#Various</h1>
-            <ul>
-                <li><h2>フォトギャラリー</h2><br>
-                <div class="code_comment">
-                    <p>【2206講習会】</p>
-                    <p>様々なライブラリを利用したフォトギャラリーの例</p>
-                    <a href="https://github.com/mayegg4869/kadai/tree/master/220611">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220611/">GitHub Pages</a>              
-                </div>
-                </li>
-                <li><h2>カウントダウンページ</h2><br>
-                    <div class="code_comment">
-                        <p>【2204講習会】課題</p>
-                        <p>Javascriptを用いたカウントダウンの表示、オープン後の出し分け表示など</p>
-                        <a href="https://github.com/mayegg4869/kadai/tree/master/220409">GitHub</a>　/　<a href="https://mayegg4869.github.io/kadai/220409">GitHub Pages</a>              
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+        <!-- content --></div>
+    <!-- panel --></div>
+ <!-- panel-greoup --></div>
 
 
 <!-- メインココマデ -->
