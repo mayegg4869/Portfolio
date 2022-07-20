@@ -8,7 +8,7 @@ function buttonClick() {
         // localStorage内の運勢をもってくる
         const storageLastFortune = localStorage.getItem('lastFortune');
         // 当日の結果を再表示する
-        document.querySelector('#omikuji_result').innerHTML = ('今日の運勢は' + storageLastFortune + 'です。また明日占いましょう。');
+        document.querySelector('#result_area').innerHTML = ('今日の運勢は' + storageLastFortune + 'です。また明日占いましょう。');
     } else {
         // 運勢の配列を作る
         const omikuji_result = ["大吉", "中吉", "小吉"];
@@ -18,16 +18,16 @@ function buttonClick() {
         // 運勢に応じてコメントを出す
         switch(random) {
         case '大吉':
-            document.querySelector('#omikuji_result').innerHTML = ('大吉！　今日はいい日です。');
+            document.querySelector('#result_area').innerHTML = ('大吉！　今日はいい日です。');
             break;
         case '中吉':
-            document.querySelector('#omikuji_result').innerHTML = ('中吉！　ちょっといいこと起こるかも。');
+            document.querySelector('#result_area').innerHTML = ('中吉！　ちょっといいこと起こるかも。');
             break;
         case '小吉':
-            document.querySelector('#omikuji_result').innerHTML = ('小吉！　そこそこですね');
+            document.querySelector('#result_area').innerHTML = ('小吉！　そこそこですね');
             break;
         default:
-            document.querySelector('#omikuji_result').innerHTML = ('Error');
+            document.querySelector('#result_area').innerHTML = ('Error');
         };
 
         // おみくじを引いた後に日付と結果を保存する
