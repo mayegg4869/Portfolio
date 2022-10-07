@@ -3,7 +3,9 @@
         const comment = [
             "ウホウホ",
             "モグモグ",
-            "ゴリラは、霊長目ヒト科ゴリラ属（ゴリラぞく、Gorilla）に分類される構成種の総称。<br>引用：Wikipedia"
+            "ゴリラは、霊長目ヒト科ゴリラ属（ゴリラぞく、Gorilla）に分類される構成種の総称。<br>引用：Wikipedia",
+            "五里霧中",
+            "𝒫𝑜𝓌𝑒𝓇"
             ];
         const random = comment[Math.floor(Math.random() * comment.length)];
         document.querySelector('.random').innerHTML = (random);

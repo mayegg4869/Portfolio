@@ -137,10 +137,14 @@ footer {
 
 a {
   color: #ff3f89;
-  line-height: 2em;
+  line-height: 1.5em;
 }
 p {
   line-height: 1.5em;
+}
+
+p img {
+	margin-right :0.5em;
 }
 
 /* ヘッダー、プロフィール */
