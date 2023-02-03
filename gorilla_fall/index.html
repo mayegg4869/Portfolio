@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="gorilla_fall.js"></script>
+</head>
+
+<html>
+    <div id="#wrap"></div>
+</html>
+<script type="text/javascript">
+    $(document).ready(function() {
+        gorilla({
+            wrap:'#wrap',                      //配置する場所
+            targetClass: 'gorilla',               //オブジェクトのクラス
+            size: {max: 30, min:10},           //オブジェクトの最大サイズ
+            objectMax: 50,                     //オブジェクトの数
+            speed: 2500,                       //オブジェクトの速度
+            swing: {max: 20, min:5, speed:800},//オブジェクトの揺れ幅
+        });
+    });
+</script>

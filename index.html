@@ -12,9 +12,11 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=M+PLUS+1p&family=Yusei+Magic&display=swap');
     </style>
+<link rel="stylesheet" href="gorilla_fall/gorilla_fall.css">
 </head>
 
 <body>
+<div id="container">
 <!-- ローディング画面 -->
 <div id="loading"><div class="spinner"></div></div>
 
@@ -26,7 +28,7 @@
     <!-- プロフィールエリア -->
     <div class="profile">
         <div class="profile_box">
-            <img src="img/profile.png">
+            <a href="javascript:void(0);" onclick="gorillaSwitch();"><img src="img/profile.png"></a>
                 <div class="random"></div>
         <!-- profile_box --></div>
 
@@ -204,6 +206,9 @@
 <!-- fancyboxココマデ -->
 <!-- JS -->
 <script src="js/script.js"></script>
+<script src="gorilla_fall/gorilla_fall.js"></script>
 <!-- JSココマデ -->
+
+</div>
 </body>
 </html>

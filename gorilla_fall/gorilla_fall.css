@@ -1,0 +1,38 @@
+/* ===== 雪を表示するコンテナのスタイル ===== */
+.gorillaFall {
+    position: relative;
+    height: 100%; /* コンテナの高さ */
+    width: 100%; /* コンテナの横幅 */
+    overflow: hidden;
+    background-color: #000; /* コンテナの背景 */
+  }
+  
+  /* ===== 雪のスタイル ===== */
+  .gorilla {
+    position: absolute;
+    animation: animate-gorilla 10s linear;
+  }
+  .gorilla::after {
+    content: "🦍";
+  }
+  
+  /* ===== 雪のアニメーション ===== */
+  @keyframes animate-gorilla {
+    0% {
+      opacity: 0;
+      top: 0;
+    }
+  
+    10% {
+      opacity: 1;
+    }
+  
+    90% {
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 0;
+      top: 100vh;
+    }
+  }
