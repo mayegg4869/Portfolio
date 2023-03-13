@@ -1,3 +1,11 @@
+//参考
+// PHP + MySQLによる簡単なブログサイトの構築
+// https://web-svr.com/PHP%E7%B7%A8/60.php
+// PHP 画像のアップロード
+// https://qiita.com/ryo-futebol/items/11dea44c6b68203228ff
+// ChatGPT
+// https://chat.openai.com/
+
 <?php
 // データベース接続設定
 include ('dbconnect.php');
