@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二度漬け禁止！串カツゲーム</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        .container {
+            width: 700px;
+            margin: 0 auto;
+        }
+
+        #tsukeru, #taberu {
+            display: none;
+        }
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        #image {
+            height: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1><img src="img/logo.png" alt="logo" width="300px"></h1>
+    <p><img id="image" src="img/image_A.png" alt="A"></p>
+
+    <button id="start" onclick="startGame()">スタート</button>
+    <button id="tsukeru" onclick="tsukeru()">つける</button>
+    <button id="taberu" onclick="taberu()">食べる</button>
+
+    <div id="popup"><img src="img/nidoduke.png"></div>
+
+    <p id="timer">制限時間: <span id="time">30</span>秒</p>
+
+    <script>
+        let tareFlag = false;
+        let tsukeruCount = 0;
+        let tabezuCount = 0; // つけずに食べた数
+        let doubleDipCount = 0;
+        let timer;
+
+        function tsukeru() {
+            if (tareFlag) {
+                showPopup();
+                doubleDipCount++;
+                tareFlag = false;
+                return;
+            }
+
+            tareFlag = true;
+            updateImage('B'); // タレがついた状態
+        }
+
+        function taberu() {
+            if (tareFlag) {
+                tsukeruCount++;
+                updateImage('A');
+            } else {
+                tabezuCount++;
+                updateImage('A');
+            }
+
+            resetGame();
+        }
+
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            document.getElementById('tsukeru').disabled = true;
+            document.getElementById('taberu').disabled = true;
+            updateImage('C');
+            setTimeout(() => {
+                popup.style.display = 'none';
+                document.getElementById('tsukeru').disabled = false;
+                document.getElementById('taberu').disabled = false;
+                updateImage('A'); // Aの状態に戻す
+            }, 3000);
+        }
+
+        function resetGame() {
+            tareFlag = false;
+            updateImage('A'); // Aの状態に戻す
+        }
+
+        function updateImage(state) {
+            const image = document.getElementById('image');
+            switch (state) {
+                case 'A':
+                    image.src = 'img/image_A.png';
+                    image.alt = 'A';
+                    break;
+                case 'B':
+                    image.src = 'img/image_B.png';
+                    image.alt = 'B';
+                    break;
+                case 'C':
+                    image.src = 'img/image_C.png';
+                    image.alt = 'C';
+                    break;
+                default:
+                    break;
+            }
+        }
+        function startGame() {
+            document.getElementById('start').style.display = 'none';
+            document.getElementById('tsukeru').style.display = 'inline-block';
+            document.getElementById('taberu').style.display = 'inline-block';
+
+            timer = setInterval(() => {
+                const timeElement = document.getElementById('time');
+                let time = parseInt(timeElement.innerText);
+                time--;
+
+                if (time <= 0) {
+                    endGame();
+                } else {
+                    timeElement.innerText = time;
+                }
+            }, 1000);
+        }
+
+    function endGame() {
+        clearInterval(timer);
+        document.getElementById('tsukeru').disabled = true;
+        document.getElementById('taberu').disabled = true;
+
+        alert(`制限時間終了！\n串カツを食べた回数: ${tsukeruCount}\nつけずに食べた回数: ${tabezuCount}\n串カツを二度漬けした回数: ${doubleDipCount}`);
+    }
+    </script>
+</div>
+</body>
+</html>
