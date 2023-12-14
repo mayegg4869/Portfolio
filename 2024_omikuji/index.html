@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="JP">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+<title>ココアちゃん新年みくじ</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Material Symbols -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,700,1,0" />
+<!-- Material Symbolsココマデ -->
+
+</head>
+<body>
+<!-- ローディング -->
+    <div id="loader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+<!-- ローディングココマデ -->
+
+<!-- メイン -->
+<div id="wrap">
+    <!-- ボリュームボタン -->
+    <button id="mute" onclick="musicPlay()"><span class="material-symbols-rounded">volume_off</span></button>
+    <!-- コンテンツ -->
+    <div id="contents">
+        <!-- キャラ -->
+        <div class="chara_area">
+            <p class="comment">ここあが今年の運勢を占うよ！</p>
+            <img src="img/chara.png" width="100%">
+        </div>
+        <!-- ボタン/結果 -->
+        <div id="omikuji">
+            <a class="btn"  href="javascript:void(0);" onclick="buttonClick();">おみくじを引く</a>
+        </div>
+    </div>
+    <!-- おみくじを振る演出 -->
+    <div id="omikuji_shake"></div>
+    <!-- フッター -->
+<footer>
+    <div id="logo"><img src="img/logo.png" width="320px"></div>
+    <p>素材提供：<a href="https://www.ac-illust.com/">Illust AC</a> / <a href="https://dova-s.jp/">DOVA-SYNDROME</a> / <a href="https://pocket-se.info/">ポケットサウンド</p>
+</footer>
+<!-- フッターココマデ -->
+</div>
+<!-- メインココマデ -->
+
+
+<!-- JS -->
+<script src="omikuji.js"></script>
+<!-- JSココマデ -->
+</body>
+</html>
