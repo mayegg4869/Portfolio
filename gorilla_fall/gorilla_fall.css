@@ -4,7 +4,7 @@
     height: 100%; /* コンテナの高さ */
     width: 100%; /* コンテナの横幅 */
     overflow: hidden;
-    background-color: #000; /* コンテナの背景 */
+    z-index: 9999;
   }
   
   /* ===== 雪のスタイル ===== */
