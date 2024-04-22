@@ -7,13 +7,14 @@
 html {
  	overflow-x: hidden;
  	font-family: 'M PLUS 1p', sans-serif;
+	background-color: #413d3b;
 }
 body {
+	margin: 0 auto;
  	display: flex;
  	flex-flow: column;
  	min-height: 100vh;
  	width: 100%;
- 	color:rgb(46, 46, 46);
  	}
 ul {
  	list-style: none;
@@ -23,10 +24,10 @@ ul {
 }
 header{
  	min-height: 180px;
- 	height: 30vh;
+ 	max-height: 500px;
  	background-attachment: fixed;
  	background-position: top center;
- 	background-size: contain;
+	background-size: 1500px 500px;
  	background-repeat: no-repeat;
  	background-image: url("img/twitter-yellow37.jpg");
  	text-align: center;
@@ -34,10 +35,16 @@ header{
 footer {
  	text-align: center;
  	padding: 0.5em;
- 	background-color: #ff3f89;
+ 	background-color: #40c699;
  	color: #f3f3f3;
  	}
+.wrap {
+	margin: 0 auto;
+	max-width: 1024px;
+	color:rgb(46, 46, 46);
+   filter: drop-shadow(5px 0px 3px rgba(37, 37, 37, 0.3)) drop-shadow(-5px 0px 3px rgba(37, 37, 37, 0.3));
 
+}
 
 /* 
 -------------------------
@@ -48,7 +55,7 @@ footer {
  	width: 100vw;
  	height: 100vh;
  	transition: all 0.5s;
- 	background-color: #ff3f89;
+ 	background-color: #594c4a;
  	position: fixed;
  	top: 0;
  	left: 0;
@@ -64,7 +71,7 @@ footer {
  	bottom: 0;
  	left: 0;
  	margin: auto;
- 	animation:gorilla 1s infinite;
+ 	animation:gorilla 3s infinite;
 }
 /* ローディングアニメーション */
 @keyframes gorilla {
@@ -115,7 +122,7 @@ footer {
  	display:none;
   }
   .tab.is-active{
- 	border-bottom: solid 2px #ff3f89;
+ 	border-bottom: solid 2px #40c699;
  	transition: all 0.4s ease-out;
   }
   .panel.is-show{
@@ -136,7 +143,7 @@ footer {
 */
 
 a {
-  color: #ff3f89;
+  color: #40c699;
   line-height: 1.5em;
 }
 p {
@@ -151,7 +158,7 @@ p img {
 .contain{
  	padding: 2rem 0;
  	background-color: #f3f3f3;
- 	filter: drop-shadow(0px -5px 3px rgba(120, 120, 120, 0.5));
+ 	filter: drop-shadow(0px -5px 2px rgba(120, 120, 120, 0.3));
  	}
 
 .profile{
@@ -171,7 +178,7 @@ p img {
  	width: 280px;
  	height: 280px;
  	border-radius: 50%;
- 	border: 10px solid #ff3f89;
+ 	border: 10px solid #40c699;
  	transition: .5s;
  	}
 .random {
@@ -206,7 +213,7 @@ p img {
 .profile dt {
  	padding: 0.3em;
  	font-weight: bolder;
- 	color: #ff3f89;
+ 	color: #40c699;
 }
 .profile dd{
  	padding-left: 2em;
@@ -217,7 +224,7 @@ p img {
 
 /* codeコンテンツ */
 .code {
- width: 70%;
+ width: 80%;
  margin: 0 auto;
  background-color: #ffffff;
  border-right: solid 1px #bbbbbb;
@@ -280,16 +287,18 @@ p img {
 
 /* pictureコンテンツ */
 .picture {
+  display: flex;
+  justify-content: space-around;
   margin: 0 auto;
-  width: 96vw;
   height: auto;
   transition: .5s opacity;
   opacity: 1;
   text-align: center;
 }
+
 .picture img {
-  width: 32vw;
-  height: 32vw;
+  width: 330px;
+  height: 330px;
   object-fit: cover;
   font-family: 'object-fit: cover;';
 }
@@ -335,19 +344,15 @@ p img {
   以下CSS設定(レスポンシブ)
 ------------------------------------------------------------
 */
-@media screen and (max-width: 1500px) { /*ウィンドウ幅が1500px以下の場合に適用*/
- 	header{
- 	background-size: 1500px 500px;
- 	}
-}
+
 @media screen and (max-width: 1024px) { /*ウィンドウ幅が1000px以下の場合に適用*/
   .profile{
  	width: 90%;
    }
-   .profile img{
+   .profile_box img{
  	width: 140px;
  	height: 140px;
- 	border: 5px solid #ff3f89;
+ 	border: 5px solid #40c699;
    }
    .profile_box {
  	margin-top: -120px;
