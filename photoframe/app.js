@@ -2,6 +2,7 @@ const video = document.getElementById('camera');
 const canvas = document.getElementById('canvas');
 const captureIcon = document.getElementById('capture-icon');
 const context = canvas.getContext('2d');
+const deviceSelect = document.getElementById('deviceSelect'); // カメラデバイス選択用のセレクトボックス
 
 // デバイスのピクセル比を取得
 const devicePixelRatio = window.devicePixelRatio || 1;
@@ -14,23 +15,51 @@ frameImg.onload = () => {
   console.log('Frame image loaded successfully.');
 };
 
-// WebRTCでカメラを起動
-navigator.mediaDevices.getUserMedia({ video: true })
-  .then(stream => {
-    video.srcObject = stream;
-    video.onloadedmetadata = () => {
-      video.play();
-      
-      // 画面全体に対応するための関数を呼び出し
-      resizeCanvasToCover();
-
-      // フレームのリアルタイム合成開始
-      drawFrameOnVideo();
-    };
-  })
-  .catch(error => {
-    console.error('カメラの起動に失敗しました:', error);
+// カメラデバイスをリスト表示する
+navigator.mediaDevices.enumerateDevices().then(devices => {
+  const videoDevices = devices.filter(device => device.kind === 'videoinput');
+  videoDevices.forEach(device => {
+    const option = document.createElement('option');
+    option.value = device.deviceId;
+    option.text = device.label || `Camera ${deviceSelect.length + 1}`;
+    deviceSelect.appendChild(option);
   });
+
+  // 最初のカメラを使用
+  if (videoDevices.length > 0) {
+    startCamera(videoDevices[0].deviceId);
+  }
+});
+
+// カメラの切り替えが行われた時にカメラを再起動
+deviceSelect.addEventListener('change', () => {
+  startCamera(deviceSelect.value);
+});
+
+// カメラを開始する関数
+function startCamera(deviceId) {
+  const constraints = {
+    video: {
+      deviceId: { exact: deviceId }
+    }
+  };
+
+  // WebRTCでカメラを起動
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(stream => {
+      video.srcObject = stream;
+      video.onloadedmetadata = () => {
+        video.play();
+        // 画面全体に対応するための関数を呼び出し
+        resizeCanvasToCover();
+        // フレームのリアルタイム合成開始
+        drawFrameOnVideo();
+      };
+    })
+    .catch(error => {
+      console.error('カメラの起動に失敗しました:', error);
+    });
+}
 
 // Canvasを全画面にしてカバーする関数
 function resizeCanvasToCover() {

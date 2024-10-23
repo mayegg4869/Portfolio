@@ -38,6 +38,16 @@
             cursor: pointer;
             z-index: 3;
         }
+        /* カメラデバイス選択セレクトボックス */
+        #deviceSelect {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 4; /* セレクトボックスを最前面に表示 */
+            padding: 5px;
+            background-color: white;
+            border: 1px solid #ccc;
+        }
     </style>
 </head>
 <body>
@@ -45,7 +55,7 @@
     <video id="camera" style="display:none;" autoplay playsinline></video>
     <canvas id="canvas" style=""></canvas>
     <img id="capture-icon" src="icon.png" alt="Capture">
-
+    <select id="deviceSelect"></select>
 
     <script src="app.js"></script>
 </body>
