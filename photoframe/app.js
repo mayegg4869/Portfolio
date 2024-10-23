@@ -25,10 +25,8 @@ navigator.mediaDevices.enumerateDevices().then(devices => {
     deviceSelect.appendChild(option);
   });
 
-  // 最初のカメラを使用
-  if (videoDevices.length > 0) {
-    startCamera(videoDevices[0].deviceId);
-  }
+  // デフォルトで外カメラを使用する
+  startCameraWithFacingMode('environment');
 });
 
 // カメラの切り替えが行われた時にカメラを再起動
@@ -36,7 +34,32 @@ deviceSelect.addEventListener('change', () => {
   startCamera(deviceSelect.value);
 });
 
-// カメラを開始する関数
+// 外カメラを開始するための関数
+function startCameraWithFacingMode(facingMode) {
+  const constraints = {
+    video: {
+      facingMode: { exact: facingMode } // 'environment' を指定して外カメラを選択
+    }
+  };
+
+  // WebRTCでカメラを起動
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then(stream => {
+      video.srcObject = stream;
+      video.onloadedmetadata = () => {
+        video.play();
+        // 画面全体に対応するための関数を呼び出し
+        resizeCanvasToCover();
+        // フレームのリアルタイム合成開始
+        drawFrameOnVideo();
+      };
+    })
+    .catch(error => {
+      console.error('カメラの起動に失敗しました:', error);
+    });
+}
+
+// カメラを開始する関数（デバイスID指定）
 function startCamera(deviceId) {
   const constraints = {
     video: {
