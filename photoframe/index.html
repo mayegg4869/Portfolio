@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>フォトフレームアプリ</title>
+    <style>
+        /* 全画面でカメラとキャンバスを表示するためのスタイル */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* スクロールバーを表示しない */
+        }
+        
+        #camera, #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw; /* ビューポートの横幅 */
+            height: 100vh; /* ビューポートの高さ */
+            object-fit: cover; /* 映像のアスペクト比を維持しつつ、全画面に合わせる */
+        }
+
+        #canvas {
+            z-index: 2; /* キャンバスをビデオの上に表示 */
+        }
+
+        /* ボタンのアイコンをページ下部中央に配置 */
+        #capture-icon {
+            position: absolute;
+            bottom: 5%; /* ページの下から5%の位置に配置 */
+            left: 50%;
+            transform: translateX(-50%); /* 左右中央に配置 */
+            width: 100px; /* アイコンのサイズを調整 */
+            height: 100px;
+            cursor: pointer;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <video id="camera" style="display:none;" autoplay playsinline></video>
+    <canvas id="canvas" style=""></canvas>
+    <img id="capture-icon" src="icon.png" alt="Capture">
+
+
+    <script src="app.js"></script>
+</body>
+</html>
